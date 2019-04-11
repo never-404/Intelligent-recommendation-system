@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Intelligent-recommendation-system">
+        <property name="context-root" value="/Intelligent-recommendation-system"/>
+    </wb-module>
+</project-modules>

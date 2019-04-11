@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="H:\Program Files\Java\jdk1.8.0_131" version="1.8.0_131">
+<bootpath>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar"/>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar"/>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar"/>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar"/>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar"/>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar"/>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar"/>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="H:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre" version="1.6.0_13">
+<bootpath>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\resources.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\rt.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\sunrsasign.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\jsse.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\jce.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\charsets.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013" version="1.6.0_13">
+<bootpath>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\resources.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\rt.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\sunrsasign.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\jsse.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\jce.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\charsets.jar"/>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="H:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>
