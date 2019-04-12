@@ -3,6 +3,6 @@
   <role rolename="myeclipseWeb"/>
   <role rolename="myeclipseWebservices"/>
   <user username="webservices" password="webservices-pwd" roles="myeclipseWebservices"/>
-  <user username="admin" password="admin-pwd" roles="myeclipseWeb,myeclipseWebservices"/>
   <user username="web" password="web-pwd" roles="myeclipseWeb"/>
+  <user username="admin" password="admin-pwd" roles="myeclipseWeb,myeclipseWebservices"/>
 </tomcat-users>

@@ -14,4 +14,8 @@
 		<item value="/Intelligent-recommendation-system/src" key="filePath"/>
 		<item value="HTML 5" key="doctype"/>
 	</section>
+	<section name="NewJspCreationWizardPage">
+		<item value="Default JSP template" key="templatezh_CN"/>
+		<item value="/Intelligent-recommendation-system/WebRoot" key="filePath"/>
+	</section>
 </section>

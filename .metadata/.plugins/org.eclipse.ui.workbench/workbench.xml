@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="81" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1024" x="104" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -26,8 +26,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.genuitec.ui.browser.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.genuitec.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -42,18 +42,25 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" partName="index.jsp" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/WebRoot/index.jsp" title="index.jsp" tooltip="Intelligent-recommendation-system/WebRoot/index.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/WebRoot/index.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="log.jsp" partName="log.jsp" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/WebRoot/log.jsp" title="log.jsp" tooltip="Intelligent-recommendation-system/WebRoot/log.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/WebRoot/log.jsp"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.html" name="log.html" partName="log.html" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/src/log.html" title="log.html" tooltip="Intelligent-recommendation-system/src/log.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/src/log.html"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="register.jsp" partName="register.jsp" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/WebRoot/register.jsp" title="register.jsp" tooltip="Intelligent-recommendation-system/WebRoot/register.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/WebRoot/register.jsp"/>
 </editor>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.html" name="register.html" partName="register.html" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/src/register.html" title="register.html" tooltip="Intelligent-recommendation-system/src/register.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/src/register.html"/>
+<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="mainpage.jsp" partName="mainpage.jsp" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/WebRoot/mainpage.jsp" title="mainpage.jsp" tooltip="Intelligent-recommendation-system/WebRoot/mainpage.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/WebRoot/mainpage.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="result.jsp" partName="result.jsp" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/WebRoot/result.jsp" title="result.jsp" tooltip="Intelligent-recommendation-system/WebRoot/result.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/WebRoot/result.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="mine.jsp" partName="mine.jsp" path="C:/Users/john/Desktop/Intelligent-recommendation-system/Intelligent-recommendation-system/WebRoot/mine.jsp" title="mine.jsp" tooltip="Intelligent-recommendation-system/WebRoot/mine.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Intelligent-recommendation-system/WebRoot/mine.jsp"/>
 </editor>
 </editors>
 <views>
@@ -119,7 +126,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.genuitec.eclipse.webdesigner3.editors.html" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="com.genuitec.eclipse.webdesigner3.editors.jsp" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -256,7 +263,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.479062" ratioLeft="286" ratioRight="311" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.8056951" ratioLeft="481" ratioRight="116" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -302,13 +309,65 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/index.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Intelligent-recommendation-system/src/log.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Intelligent-recommendation-system/src/register.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/log.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/register.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/mine.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/result.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/mainpage.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/log.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/result.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/result.jsp"/>
 </editors>
-<item historyLabel="index.jsp" index="0"/>
-<item historyLabel="log.html" index="1"/>
-<item active="true" historyLabel="register.html" index="2"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="log.jsp" index="0"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="log.jsp" index="0"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="log.jsp" index="0"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="log.jsp" index="0"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="result.jsp" index="3"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="log.jsp" index="5"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="log.jsp" index="5"/>
+<item historyLabel="result.jsp" index="6"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="log.jsp" index="5"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="log.jsp" index="5"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="result.jsp" index="7"/>
+<item historyLabel="mine.jsp" index="2"/>
+<item historyLabel="register.jsp" index="1"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="result.jsp" index="7"/>
+<item historyLabel="mainpage.jsp" index="4"/>
+<item historyLabel="register.jsp" index="1"/>
+<item active="true" historyLabel="mainpage.jsp" index="4"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -326,6 +385,24 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="mine.jsp" tooltip="Intelligent-recommendation-system/WebRoot/mine.jsp">
+<persistable path="/Intelligent-recommendation-system/WebRoot/mine.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="result.jsp" tooltip="Intelligent-recommendation-system/WebRoot/result.jsp">
+<persistable path="/Intelligent-recommendation-system/WebRoot/result.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="forget_pswd.jsp" tooltip="Intelligent-recommendation-system/WebRoot/forget_pswd.jsp">
+<persistable path="/Intelligent-recommendation-system/WebRoot/forget_pswd.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="mainpage.jsp" tooltip="Intelligent-recommendation-system/WebRoot/mainpage.jsp">
+<persistable path="/Intelligent-recommendation-system/WebRoot/mainpage.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="register.jsp" tooltip="Intelligent-recommendation-system/WebRoot/register.jsp">
+<persistable path="/Intelligent-recommendation-system/WebRoot/register.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="log.jsp" tooltip="Intelligent-recommendation-system/WebRoot/log.jsp">
+<persistable path="/Intelligent-recommendation-system/WebRoot/log.jsp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="register.html" tooltip="Intelligent-recommendation-system/src/register.html">
 <persistable path="/Intelligent-recommendation-system/src/register.html"/>
 </file>
