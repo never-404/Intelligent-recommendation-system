@@ -2428,3 +2428,12 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.jdt.core 2 0 2019-04-12 17:50:12.051
 !MESSAGE The Java indexing could not index H:/Program Files/Java/jdk1.8.0_131/jre/lib/ext/access-bridge-64.jar|com/sun/java/accessibility/AccessBridge.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+!SESSION 2019-04-14 22:06:03.628 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2019-04-14 22:06:36.512
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2

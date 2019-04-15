@@ -24,16 +24,16 @@
 		h1	  {text-align: center}
 </style>
 	</head>
-	<body>
+	<body background="background3.jpg">
 	<div class="title">
 		<h1>用户注册</h1>
 	</div>
 	<div class="table">
 	
 		<form action = "mainpage.jsp" method = "post">
-			<lable>用户名</lable><input name="username" type="text"><BR>
-			<lable>密码</lable><input id="pwd2" name="password1" type="password" ><BR>
-			<lable>确认密码</lable><input name="password2" type="password"><BR>
+			<lable>用户名</lable><input name="username" type="text" placeholder="请输入用户名" /><BR>
+			<lable>密码</lable><input id="pwd2" name="password1" type="password" placeholder="请输入密码"/><BR>
+			<lable>确认密码</lable><input name="password2" type="password"/><BR>
 			<lable>性别</lable>
 				<input name="sex" type="radio" value="男" checked>男
 				<input name="sex" type="radio" value="女" >女<BR>
