@@ -1,0 +1,7 @@
+<!doctype html>
+<html>
+          <body>
+                          <input type="text" name="use" placeholder="ÇëÊäÈëÄÚÈÝ" />
+                          <input type="submit" />
+           </body>
+</html>

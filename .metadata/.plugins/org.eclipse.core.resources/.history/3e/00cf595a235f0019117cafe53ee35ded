@@ -1,0 +1,56 @@
+<%@ page language="java" contentType= "text/html;charset=gb2312" %>
+<html>
+
+	<head>
+		<title>登录页面</title>
+	    <meta charset="utf-8">
+	    
+		<style type="text/css">
+		.title
+		{
+			font-size: 300%
+			text-align: center
+
+		}
+		.table
+		{
+			margin:auto;
+			width:25%;
+			background-color:#b0e0e6;
+		}
+		lable { float: left; width: 7em; margin-right:1em; text-align: right; }
+		h1	  {text-align: center
+				font-size: 300%
+		}
+
+        .a{
+            text-align:center;
+            vertical-align:middle;
+        }
+        img{max-width: 100%; height:auto;}
+
+</style>
+	</head>
+	
+	<body background="background.jpg">
+	<h1 >欢迎来到旅客行程智能推荐系统！</h1><BR>
+    <div class="table">
+    	<lable>用户名：</lable><input type="text" name="number" placeholder="请输入用户名" size="15" maxlength="10"/>
+        <!--学号为10位-->
+        <br>
+        <lable>密码：</lable><input type="password" name="passport" placeholder="请输入密码" size="15" maxlength="10"/>
+        <br>
+    </div>
+    <div class="a">
+        <button id="denglu">
+            <a href="mainpage.jsp">登录</a></button>
+            <!-- 不同的登录界面链接到的页面也不同 -->
+        <br>
+            <a href="forget_pswd.jsp"> 忘记密码</a>
+            <!--忘记密码跳转的网址-->
+	</div>
+	
+	</body>
+
+
+</html>
