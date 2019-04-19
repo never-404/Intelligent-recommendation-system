@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="75" version="2.0">
+<workbench progressCount="82" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1024" x="104" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -26,7 +26,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -272,7 +272,7 @@
 </folder>
 </info>
 <info folder="true" part="bottom" ratio="0.6080402" ratioLeft="363" ratioRight="234" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.genuitec.eclipse.ast.deploy.core.serverview" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="com.genuitec.eclipse.ui.HTMLView" label="Web Browser"/>
@@ -328,12 +328,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/register.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/forget_pswd.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/result.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" path="/Intelligent-recommendation-system/src/log.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/mainpage.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/Intelligent-recommendation-system/WebRoot/register.jsp"/>
 </editors>
-<item historyLabel="mine.jsp" index="1"/>
-<item historyLabel="mainpage.jsp" index="2"/>
-<item historyLabel="mine.jsp" index="1"/>
-<item historyLabel="mainpage.jsp" index="2"/>
-<item historyLabel="mine.jsp" index="1"/>
 <item historyLabel="mainpage.jsp" index="2"/>
 <item historyLabel="register.jsp" index="0"/>
 <item historyLabel="mainpage.jsp" index="2"/>
@@ -378,6 +376,11 @@
 <item historyLabel="result.jsp" index="10"/>
 <item historyLabel="mainpage.jsp" index="2"/>
 <item historyLabel="register.jsp" index="8"/>
+<item historyLabel="log.jsp" index="5"/>
+<item historyLabel="log.html" index="11"/>
+<item historyLabel="log.jsp" index="5"/>
+<item historyLabel="mainpage.jsp" index="12"/>
+<item historyLabel="register.jsp" index="13"/>
 <item active="true" historyLabel="log.jsp" index="5"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -396,6 +399,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="log.html" tooltip="Intelligent-recommendation-system/src/log.html">
+<persistable path="/Intelligent-recommendation-system/src/log.html"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="forget_pswd.jsp" tooltip="Intelligent-recommendation-system/WebRoot/forget_pswd.jsp">
 <persistable path="/Intelligent-recommendation-system/WebRoot/forget_pswd.jsp"/>
 </file>
@@ -419,9 +425,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="register.html" tooltip="Intelligent-recommendation-system/src/register.html">
 <persistable path="/Intelligent-recommendation-system/src/register.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.html" name="log.html" tooltip="Intelligent-recommendation-system/src/log.html">
-<persistable path="/Intelligent-recommendation-system/src/log.html"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" tooltip="Intelligent-recommendation-system/WebRoot/index.jsp">
 <persistable path="/Intelligent-recommendation-system/WebRoot/index.jsp"/>
