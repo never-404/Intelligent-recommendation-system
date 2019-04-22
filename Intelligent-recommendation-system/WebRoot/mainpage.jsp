@@ -6,6 +6,25 @@
 	    <meta charset="utf-8">
 	    
 		<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.clearfix:before,.clearfix:after { content:"";display:table; }
+		.clearfix:after {clear:both;}
+		.clearfix { *zoom:1;}
+		@font-face {
+  		font-family: 'icomoon';
+  		src:  url('../fonts/icomoon.eot?1x1j55');
+ 		 src:  url('../fonts/icomoon.eot?1x1j55#iefix') format('embedded-opentype'),
+ 		 url('../fonts/icomoon.ttf?1x1j55') format('truetype'),
+  		url('../fonts/icomoon.woff?1x1j55') format('woff'),
+  		url('../fonts/icomoon.svg?1x1j55#icomoon') format('svg');
+  		font-weight: normal;
+  		font-style: normal;
+		}
+		body
+		{
+			opacity:0.9;
+			background-image:url(background.jpg);
+		}
 		div.title
 		{
 			margin:auto;
@@ -18,34 +37,117 @@
 			width:25%;
 			background-color:#b0e0e6;
 		}
-		lable { float: left; width: 7em; margin-right:1em; text-align: right; }
-		h1	  {text-align: center}
-
+		lable { 
+			float: left; 
+			width: 7em; 
+			margin-right:1em; 
+			text-align: right;
+		 }
+		h1{ 
+			margin-left:595;
+			color:#3e3a37;
+			margin-bottom:20px;
+		}
         div.a{
             text-align:center;
             vertical-align:middle;
         }
-        img{max-width: 100%; height:auto;}
-
+        img{
+        	max-width: 100%;
+        	 height:auto;
+        }
+        .main{
+        	margin-left:630px;
+        	border:1px solid #3e3a37;
+        	border-style:ridge;
+        	border-radius:20px;
+        	width:150px;
+        	padding:10px 30px;
+        }
+        .main form input
+        {
+        	margin-top:10px;
+        	margin-left:50px;
+        	padding:5px;
+        	border:1px solid #3e3a37;
+        	-webkit-border-radius:10px;
+        }
+		.w {
+			width: 1190px;
+			margin: auto;
+		}
+		.fr {
+			float: right;
+		}
+		.fl {
+			float: left;
+		}
+		.style-red {
+			color: #f10215!important;
+		}
+		a {
+			text-decoration: none;
+		}
+		li {
+			list-style: none;
+		}
+		.shortcut {
+			height: 30px;
+			background-color: #E3E4E5;
+			border-bottom: 1px solid #DDD;
+			line-height: 30px;
+		}
+		.shortcut a {
+			color: #9D9D9D;
+			font-size: 12px; 
+			text-decoration: none;
+		}
+		.shortcut .fr li {
+			float: left; 
+		}
+		.shortcut .fr li {
+			margin-left: 10px;
+		}
 </style>
 	</head>
 	
-	<body>
-	
-	<h1>欢迎来到XXX系统！</h1>
-	<!-- 两者选其一显示 -->
-	<form action = "mine.jsp" method = "post">
-		<input type="submit" value ="我的">
-	</form>
-
-	<form action = "log.jsp" method = "post">
-		<input type="submit" value ="登录">
-	</form>
-	
-	<form action = "register.jsp" method = "post">
-		<input type="submit" value ="注册">
-	</form>
-
+		<body>
+		 <!--  导航栏开始 -->
+	    <div class="shortcut">
+    	<div class="w">
+    		<ul class="fl">
+    			<li>
+    			   南昌
+    		    </li>
+    		</ul>
+    		<ul class="fr">
+    			<li>
+    				<a href="log.jsp">你好，请登录&nbsp;&nbsp;</a>
+    				<a href="register.jsp" class="style-red">免费注册 </a>
+    			</li> 
+    			<li class="spacer"></li>
+    			<li>
+    				<a href="mine.jsp">个人中心</a>
+    			</li>
+    			<li class="spacer"></li>
+    			<li class="dropdown">
+    				<a href="#">我的行程</a>
+    			</li>
+    			<li class="spacer"></li>
+    			<li>
+    				<a href="mine.jsp">用户反馈</a>
+    			</li>
+    	    	<li class="spacer"></li>
+    			<li>
+    				<a href="#">关于我们</a>
+    			</li>
+    			<li class="spacer"></li>
+    		</ul>
+    	</div>
+    </div>
+     <!--  页面中心开始 -->
+	<h1>欢迎来到never-404！</h1>
+	<div class="main">
     	出发地
     	<select>
     		<option>南昌</option>
@@ -62,6 +164,7 @@
     	</select>
         <br>
 
+
 	<input type="radio" name="selection" checked>时间最短<br>
 	<input type="radio" name="selection">最便宜<br>
 	<input type="radio" name="selection">最舒服<br>
@@ -69,9 +172,8 @@
 	<form action = "result.jsp" method = "post">
 		<input type="submit" value ="查询">
 	</form>
+ </div>
 
-
-	
 	</body>
 
 
