@@ -23,7 +23,8 @@
 		body
 		{
 			opacity:0.9;
-				}
+			background-image:url(background_yc.jpg);
+		}
 		div.title
 		{
 			margin:auto;

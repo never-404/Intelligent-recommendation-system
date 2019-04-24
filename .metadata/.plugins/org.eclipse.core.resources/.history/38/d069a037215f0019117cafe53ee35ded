@@ -1,8 +1,0 @@
-<!doctype html>
-<html>
-          <body background="/pic/background.jpg">
-	
-                          <input type="text" name="use" placeholder="ÇëÊäÈëÄÚÈÝ" />
-                          <input type="submit" />
-           </body>
-</html>
