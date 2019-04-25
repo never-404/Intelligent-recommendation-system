@@ -10,20 +10,12 @@
 		.clearfix:before,.clearfix:after { content:"";display:table; }
 		.clearfix:after {clear:both;}
 		.clearfix { *zoom:1;}
-		@font-face {
-  		font-family: 'icomoon';
-  		src:  url('../fonts/icomoon.eot?1x1j55');
- 		 src:  url('../fonts/icomoon.eot?1x1j55#iefix') format('embedded-opentype'),
- 		 url('../fonts/icomoon.ttf?1x1j55') format('truetype'),
-  		url('../fonts/icomoon.woff?1x1j55') format('woff'),
-  		url('../fonts/icomoon.svg?1x1j55#icomoon') format('svg');
-  		font-weight: normal;
-  		font-style: normal;
-		}
+
 		body
 		{
 			opacity:0.9;
-				}
+		background-color:#b9b6b252;
+		}
 		div.title
 		{
 			margin:auto;
@@ -42,10 +34,11 @@
 			margin-right:1em; 
 			text-align: right;
 		 }
-		h1{ 
-            text-align:center;
-			color:#3e3a37;
-			margin-bottom:20px;
+		h1{
+			text-align:center;
+			color:#99696b;
+			margin-bottom:30px;
+			 font-family:"楷体";
 		}
         div.a{
             text-align:center;
@@ -60,16 +53,41 @@
         	border:1px solid #3e3a37;
         	border-style:ridge;
         	border-radius:20px;
-        	width:150px;
-        	padding:10px 30px;
+        	width:200px;
+        	height:280px;
+        	padding:5px 30px;
+        	background-color: #E3E4E5;
+        }
+        .main option{
+        font-family:"楷体";
+        }
+        .main .begin{
+        margin:auto;
+        font-size:25px;
+        font-family:"楷体";
+        padding:5px 20px;
+        }
+         .main .arrive{
+        margin:auto;
+        font-size:25px;
+        font-family:"楷体";
+        padding:5px 20px;
+        }
+        .main .radio{
+        margin:auto;
+        font-size:25px;
+        font-family:"楷体";
+        padding:5px 30px;
         }
         .main form input
         {
-        	margin-top:10px;
-        	margin-left:50px;
+        	margin:auto;
         	padding:5px;
         	border:1px solid #3e3a37;
         	-webkit-border-radius:10px;
+        }
+        .main form{
+        	padding:20px 73px;
         }
 		.w {
 			width: 1190px;
@@ -106,6 +124,17 @@
 		}
 		.shortcut .fr li {
 			margin-left: 10px;
+		}
+		.bottom{
+			width:100%;
+			position:fixed;
+			bottom:30px;
+		}
+		.bottom .introduction{
+			text-align:center;
+			font-size:13px;
+			margin-top:5px;
+			
 		}
 </style>
 	</head>
@@ -145,33 +174,41 @@
     	</div>
     </div>
      <!--  页面中心开始 -->
-	<h1>欢迎来到never-404！</h1>
+     <h1>欢迎来到never-404！</h1>
+	 
 	<div class="main">
-    	出发地
+		<div class="begin">
+		出发地
     	<select>
     		<option>南昌</option>
     		<option>北京</option>
     		<option>黑龙江</option>
     	</select>
+		</div>
         <br>
-        
+        <div class="arrive">
     	目的地
     	<select>
     		<option>南昌</option>
     		<option>北京</option>
     		<option>黑龙江</option>
     	</select>
+    	</div>
         <br>
 
-
+	<div class="radio">
 	<input type="radio" name="selection" checked>时间最短<br>
 	<input type="radio" name="selection">最便宜<br>
 	<input type="radio" name="selection">最舒服<br>
-	
+	</div>
 	<form action = "result.jsp" method = "post">
 		<input type="submit" value ="查询">
 	</form>
- </div>
+	 </div>
+	 <div class="bottom">
+	 	<hr>
+	 	<div class="introduction">旅客行程智能推荐系统</div>
+	 </div>
 
 	</body>
 
