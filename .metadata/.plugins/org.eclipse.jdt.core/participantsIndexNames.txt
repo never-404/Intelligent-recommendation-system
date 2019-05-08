@@ -1,3 +1,5 @@
 INDEX VERSION 1.126
 C:\Users\john\Desktop\Intelligent-recommendation-system\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1129028211.index
 \Intelligent-recommendation-system\src
+C:\Users\john\Desktop\Intelligent-recommendation-system\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3538989693.index
+\ServletCartDemo\src
