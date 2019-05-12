@@ -241,49 +241,17 @@ class DataBuilder {
 
 }
 
-
-
 /**
-
- * 
-
- */
-
-
-/**
-
  * desc：地铁站对象
-
- * @author chaisson
-
- * @since 2015-5-31 上午10:22:44
-
- *
-
  */
 
 class Station {
-
-	
-
 	private String name; //地铁站名称，假设具备唯一性
-
-	
-
 	public Station prev; //本站在lineNo线上面的前一个站
-
-	
-
 	public Station next; //本站在lineNo线上面的后一个站
-
-	
-
 	//本站到某一个目标站(key)所经过的所有站集合(value)，保持前后顺序
 
 	private Map<Station,LinkedHashSet<Station>> orderSetMap = new HashMap<Station,LinkedHashSet<Station>>();
-
-	
-
 	public Station (String name){
 
 		this.name = name;
