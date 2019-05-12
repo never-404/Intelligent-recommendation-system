@@ -12,9 +12,8 @@ public class dao {
 		ArrayList students= new ArrayList();
 		try {
 			//获取连接
-			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-			String url="jdbc:odbc:DsSchool";
-			conn = DriverManager.getConnection(url, "", "");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/subway_database?serverTimezone=GMT","root","123456");
 			// 运行SQL语句
 			String sql = "SELECT STUNO,STUNAME from T_STUDENT";
 			Statement stat = conn.createStatement();
