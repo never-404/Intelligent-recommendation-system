@@ -63,7 +63,7 @@ class DataBuilder {
 
 		for(String s : line1Arr){
 
-			line1.add(new Station(s));
+			line1.add(new Station(s,"1"));
 
 		}
 
@@ -91,7 +91,7 @@ class DataBuilder {
 
 		for(String s : line2Arr){
 
-			line2.add(new Station(s));
+			line2.add(new Station(s,"2"));
 
 		}
 
@@ -119,7 +119,7 @@ class DataBuilder {
 
 		for(String s : line3Arr){
 
-			line3.add(new Station(s));
+			line3.add(new Station(s,"3"));
 
 		}
 
@@ -147,7 +147,7 @@ class DataBuilder {
 
 		for(String s : line10Arr){
 
-			line10.add(new Station(s));
+			line10.add(new Station(s,"10"));
 
 		}
 
@@ -175,7 +175,7 @@ class DataBuilder {
 
 		for(String s : lineS1Arr){
 
-			lineS1.add(new Station(s));
+			lineS1.add(new Station(s,"s1"));
 
 		}
 
@@ -203,7 +203,7 @@ class DataBuilder {
 
 		for(String s : lineS8Arr){
 
-			lineS8.add(new Station(s));
+			lineS8.add(new Station(s,"s8"));
 
 		}
 
@@ -277,17 +277,17 @@ class Station {
 	public Station next; //本站在lineNo线上面的后一个站
 
 	
-
+	public String num; 
 	//本站到某一个目标站(key)所经过的所有站集合(value)，保持前后顺序
 
 	private Map<Station,LinkedHashSet<Station>> orderSetMap = new HashMap<Station,LinkedHashSet<Station>>();
 
 	
 
-	public Station (String name){
+	public Station (String name,String num){
 
 		this.name = name;
-
+		this.num = num;
 	}
 
  
@@ -297,14 +297,23 @@ class Station {
 		return name;
 
 	}
-
  
-
 	public void setName(String name) {
 
 		this.name = name;
 
 	}
+	
+	public String getNum() {
+		return num+"号线";
+
+	}
+	
+	public void setNum(String num) {
+
+		this.num = num;
+	}
+
 
 	
 
@@ -405,10 +414,19 @@ public class Subway {
 		if(outList.size() == DataBuilder.totalStaion){
 
 			System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
-
+			int i=0;
 			for(Station station : s1.getAllPassedStations(s2)){
-
-				System.out.print(station.getName()+"->");
+				if(i==0){
+					System.out.print(station.getName()+"->");
+					i++;
+				}
+				else{
+					
+						System.out.print(station.getNum()+station.getName()+"->");
+						i++;
+						
+				}
+				
 
 			}
 
@@ -584,7 +602,7 @@ public class Subway {
 
 		Subway sw = new Subway();
 
-		sw.calculate(new Station("南京站"), new Station("奥体东站"));
+		sw.calculate(new Station("红山动物园站",""), new Station("云锦路站",""));
 
 		long t2 = System.currentTimeMillis();
 
