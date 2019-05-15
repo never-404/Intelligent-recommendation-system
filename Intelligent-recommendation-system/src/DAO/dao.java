@@ -1,6 +1,6 @@
-package beans;
+package DAO;
 
-public class Student {
+ class Student {
 	private String stuno;
 	private String stuname;
 	private String stuschool;
