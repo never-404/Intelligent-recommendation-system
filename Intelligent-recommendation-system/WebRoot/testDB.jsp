@@ -9,17 +9,17 @@
       <%
 	
         stationDao sdao= new stationDao();
-       	ArrayList substations= sdao.queryAllStudents();
+       	ArrayList stations= sdao.queryAllStudents();
 
-		for (int i = 0; i < substations.size(); i++) {
-			station substation=(station)substations.get(i);
+		for (int i = 0; i < stations.size(); i++) {
+			station station=(station)stations.get(i);
 
         //if(substation!=null){
         %>
         <% 
         //out.println(subwayLine);
         //out.println(direction);
-        out.println(substation.getSubwayLine());
+        out.println(station.getSubwayLine());
         
         }
 
