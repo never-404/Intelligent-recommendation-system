@@ -22,13 +22,13 @@ public class stationDao {
 			String url="jdbc:mysql://localhost:3306/project";
 			conn = DriverManager.getConnection(url, "root", "123456");
 			// 运行SQL语句
-			String sql = "SELECT 车站,方向 from 北京地铁时刻表";
+			String sql = "SELECT 地铁线  from line";
 			Statement stat = conn.createStatement();
 			ResultSet rs = stat.executeQuery(sql);
 			while (rs.next()) {
                 //实例化VO
 				station station = new station();
-				station.setSubwayLine(rs.getString("STUNO"));
+				station.setSubwayLine(rs.getString("地铁线"));
 				stations.add(station);
 			}
 			rs.close();
