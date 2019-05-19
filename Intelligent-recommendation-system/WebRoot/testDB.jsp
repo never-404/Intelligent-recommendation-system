@@ -10,7 +10,7 @@
       <%
 	
         stationDao sdao= new stationDao();
-       	ArrayList stations= sdao.queryAllStudents();
+       	ArrayList stations= sdao.queryAllStations();
 		%>
 		<table border=2>
 			<tr>
@@ -25,11 +25,18 @@
 			station station=(station)stations.get(i);
 		%>
 			<tr>
-				<td><%=station.getDirection()%></td>
+				<td><%=station.getSubwayLine()%></td>
 			</tr>
 			<%
 				}
         	%>
+        	
+        <%
+        for(int j = 0;j<20;j++){
+				out.print(RouteNum[j]+"号线"+Route[j]+"->");
+			}
+        
+         %>
 
   </body>
 </html>

@@ -13,7 +13,7 @@ import javabean.station;
 
 public class stationDao {
 
-	public ArrayList queryAllStudents() throws Exception {
+	public ArrayList queryAllStations(String stationname)  throws Exception {
 		Connection conn = null;
 		ArrayList stations= new ArrayList();
 		try {
@@ -22,13 +22,13 @@ public class stationDao {
 			String url="jdbc:mysql://localhost:3306/subway_database?useUnicode=true&characterEncoding=utf8";
 			conn = DriverManager.getConnection(url, "root", "123456");
 			// 运行SQL语句
-			String sql = "SELECT direction from line";
+			String sql = "SELECT 首车时间 from line WHERE 车站  LIKE '%" + stationname + "%'";
 			Statement stat = conn.createStatement();
 			ResultSet rs = stat.executeQuery(sql);
 			while (rs.next()) {
                 //实例化VO
 				station station = new station();
-				station.setDirection(rs.getString("direction"));
+				station.setSubwayLine(rs.getString("首车时间"));
 				stations.add(station);
 			}
 			rs.close();
