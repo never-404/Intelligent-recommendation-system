@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*,java.sql.*" contentType="text/html; charset=UTF-8"%>
 <%@ page import="DAO.stationDao" %>
 <%@ page import= "javabean.station"%>
+<%@ page import= "Subway.Subway"%>
 
 <html>
 	<body>  
@@ -24,7 +25,7 @@
 			station station=(station)stations.get(i);
 		%>
 			<tr>
-				<td><%=station.getSubwayLine()%></td>
+				<td><%=station.getDirection()%></td>
 			</tr>
 			<%
 				}

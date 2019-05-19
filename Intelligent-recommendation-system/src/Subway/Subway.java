@@ -250,7 +250,7 @@ class Station {
 	public Station prev; //本站在lineNo线上面的前一个站
 	public Station next; //本站在lineNo线上面的后一个站
 
-	public String num; 
+	private String num; 
 
 	//本站到某一个目标站(key)所经过的所有站集合(value)，保持前后顺序
 
@@ -260,8 +260,10 @@ class Station {
 		this.num = num;
 	}
 
- 
+	public Station (){
 
+	}
+	
 	public String getName() {
 
 		return name;
@@ -275,7 +277,7 @@ class Station {
 	}
 	
 	public String getNum() {
-		return num+"号线";
+		return num;
 
 	}
 	
@@ -374,9 +376,9 @@ public class Subway {
 	
 
 	private List<Station> outList = new ArrayList<Station>();//记录已经分析过的站点
-
-	
-
+	Station startStation,endStation; 
+	String startRoute[] = new String[30];
+	String endRoute[] = new String[30];
 	//计算从s1站到s2站的最短经过路径
 
 	public void calculate(Station s1,Station s2){
@@ -385,18 +387,30 @@ public class Subway {
 
 			System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
 			int i=0;
+			startStation = s1;
+			endStation = s1;
+			startRoute[i] = startStation.getName();
+
 			for(Station station : s1.getAllPassedStations(s2)){
-				if(i==0){
-					System.out.print(station.getName()+"->");
+				System.out.print(station.getNum()+station.getName()+"->");
+				
+				if((station.getNum() != endStation.getNum()) && (endStation.getNum()!= "")){
 					i++;
+					startStation = station;
+					startRoute[i] = endStation.getName();
+					endRoute[i-1] = endStation.getName();
+					endStation = station;
 				}
 				else{
-					
-						System.out.print(station.getNum()+station.getName()+"->");
-						i++;
-						
+					endStation = station;
 				}
-				
+			}
+			System.out.println();
+			endRoute[i] = s2.getName();
+			
+			for(int j = 0;j<=i;j++){
+				System.out.print("j:  "+j+"  ");
+				System.out.println("startRoute:"+startRoute[j]+"endRoute:"+endRoute[j]);
 
 			}
 
@@ -421,7 +435,6 @@ public class Subway {
 				s1.getAllPassedStations(s).add(s);
 
 			}
-
 		}
 
 		Station parent = getShortestPath(s1);//获取距离起点站s1最近的一个站（有多个的话，随意取一个）
@@ -465,7 +478,7 @@ public class Subway {
 					s1.getAllPassedStations(child).add(child);
 
 				}
-
+				
 			} else {
 
 				//如果s1还没有计算过到此child的经过距离
@@ -572,7 +585,7 @@ public class Subway {
 
 		Subway sw = new Subway();
 
-		sw.calculate(new Station("红山动物园站",""), new Station("云锦路站",""));
+		sw.calculate(new Station("南京站",""), new Station("小行站",""));
 
 		long t2 = System.currentTimeMillis();
 

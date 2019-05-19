@@ -19,16 +19,16 @@ public class stationDao {
 		try {
 			//获取连接
 			Class.forName("com.mysql.jdbc.Driver");
-			String url="jdbc:mysql://localhost:3306/project";
+			String url="jdbc:mysql://localhost:3306/subway_database?useUnicode=true&characterEncoding=utf8";
 			conn = DriverManager.getConnection(url, "root", "123456");
 			// 运行SQL语句
-			String sql = "SELECT 地铁线  from line";
+			String sql = "SELECT direction from line";
 			Statement stat = conn.createStatement();
 			ResultSet rs = stat.executeQuery(sql);
 			while (rs.next()) {
                 //实例化VO
 				station station = new station();
-				station.setSubwayLine(rs.getString("地铁线"));
+				station.setDirection(rs.getString("direction"));
 				stations.add(station);
 			}
 			rs.close();
