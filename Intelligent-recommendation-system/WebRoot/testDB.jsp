@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*,java.sql.*" contentType="text/html; charset=UTF-8"%>
 <%@ page import="DAO.stationDao" %>
 <%@ page import= "javabean.station"%>
+<%@ page import= "Subway.Subway"%>
 
 <html>
 	<body>  
@@ -9,7 +10,7 @@
       <%
 	
         stationDao sdao= new stationDao();
-       	ArrayList stations= sdao.queryAllStudents();
+       	ArrayList stations= sdao.queryAllStations();
 		%>
 		<table border=2>
 			<tr>
@@ -29,6 +30,13 @@
 			<%
 				}
         	%>
+        	
+        <%
+        for(int j = 0;j<20;j++){
+				out.print(RouteNum[j]+"号线"+Route[j]+"->");
+			}
+        
+         %>
 
   </body>
 </html>
