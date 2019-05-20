@@ -1,8 +1,8 @@
-<%@ page language="java" contentType= "text/html;charset=gb2312" %>
+<%@ page language="java" contentType= "text/html;charset=UTF-8" %>
 <html>
 
 	<head>
-		<title>XXXÏµÍ³</title>
+		<title>XXXç³»ç»Ÿ</title>
 	    <meta charset="utf-8">
 	    
 		<style type="text/css">
@@ -38,7 +38,7 @@
 			text-align:center;
 			color:#99696b;
 			margin-bottom:30px;
-			 font-family:"¿¬Ìå";
+			 font-family:"æ¥·ä½“";
 		}
         div.a{
             text-align:center;
@@ -59,24 +59,24 @@
         	background-color: #E3E4E5;
         }
         .main option{
-        font-family:"¿¬Ìå";
+        font-family:"æ¥·ä½“";
         }
         .main .begin{
         margin:auto;
         font-size:25px;
-        font-family:"¿¬Ìå";
+        font-family:"æ¥·ä½“";
         padding:5px 20px;
         }
          .main .arrive{
         margin:auto;
         font-size:25px;
-        font-family:"¿¬Ìå";
+        font-family:"æ¥·ä½“";
         padding:5px 20px;
         }
         .main .radio{
         margin:auto;
         font-size:25px;
-        font-family:"¿¬Ìå";
+        font-family:"æ¥·ä½“";
         padding:5px 30px;
         }
         .main form input
@@ -140,74 +140,78 @@
 	</head>
 	
 		<body>
-		 <!--  µ¼º½À¸¿ªÊ¼ -->
+		 <!--  å¯¼èˆªæ å¼€å§‹ -->
 	    <div class="shortcut">
     	<div class="w">
     		<ul class="fl">
     			<li>
-    			   ÄÏ²ı
+    			   å—æ˜Œ
     		    </li>
     		</ul>
     		<ul class="fr">
     			<li>
-    				<a href="log.jsp">ÄãºÃ£¬ÇëµÇÂ¼&nbsp;&nbsp;</a>
-    				<a href="register.jsp" class="style-red">Ãâ·Ñ×¢²á </a>
+    				<a href="log.jsp">ä½ å¥½ï¼Œè¯·ç™»å½•&nbsp;&nbsp;</a>
+    				<a href="register.jsp" class="style-red">å…è´¹æ³¨å†Œ </a>
     			</li> 
     			<li class="spacer"></li>
     			<li>
-    				<a href="mine.jsp">¸öÈËÖĞĞÄ</a>
+    				<a href="mine.jsp">ä¸ªäººä¸­å¿ƒ</a>
     			</li>
     			<li class="spacer"></li>
     			<li class="dropdown">
-    				<a href="#">ÎÒµÄĞĞ³Ì</a>
+    				<a href="#">æˆ‘çš„è¡Œç¨‹</a>
     			</li>
     			<li class="spacer"></li>
     			<li>
-    				<a href="mine.jsp">ÓÃ»§·´À¡</a>
+    				<a href="mine.jsp">ç”¨æˆ·åé¦ˆ</a>
     			</li>
     	    	<li class="spacer"></li>
     			<li>
-    				<a href="#">¹ØÓÚÎÒÃÇ</a>
+    				<a href="#">å…³äºæˆ‘ä»¬</a>
     			</li>
     			<li class="spacer"></li>
     		</ul>
     	</div>
     </div>
-     <!--  Ò³ÃæÖĞĞÄ¿ªÊ¼ -->
-     <h1>»¶Ó­À´µ½never-404£¡</h1>
+     <!--  é¡µé¢ä¸­å¿ƒå¼€å§‹ -->
+     <h1>æ¬¢è¿æ¥åˆ°never-404ï¼</h1>
 	 
 	<div class="main">
+	<form action = "servlet/queryWithServlet" method = "post">
 		<div class="begin">
-		³ö·¢µØ
-    	<select name="startStation">
-    		<option>ÄÏ¾©Õ¾</option>
-    		<option>ÖĞ»ªÃÅÕ¾</option>
-    		<option>ĞşÎäÃÅÕ¾</option>
+		å‡ºå‘åœ°ï¼š<input type="text" name="account"><br>
+		
+    	<select name="startStation1">
+    		<option value="ä¸‡å¯¿è·¯">ä¸‡å¯¿è·¯</option>
+    		<option value="å¤åŸ">å¤åŸ</option>
+    		<option value="å››æƒ ä¸œ">å››æƒ ä¸œ</option>
     	</select>
 		</div>
         <br>
+        
         <div class="arrive">
-    	Ä¿µÄµØ
+    	ç›®çš„åœ°
     	<select name="endStation">
-    		<option>ÄÏ¾©Õ¾</option>
-    		<option>Ğ¡ĞĞÕ¾</option>
-    		<option>°²µÂÃÅÕ¾</option>
+    		<option>å—äº¬ç«™</option>
+    		<option>å°è¡Œç«™</option>
+    		<option>å®‰å¾·é—¨ç«™</option>
     	</select>
     	</div>
         <br>
 
 	<div class="radio">
-	<input type="radio" name="selection" checked>Ê±¼ä×î¶Ì<br>
-	<input type="radio" name="selection">×î±ãÒË<br>
-	<input type="radio" name="selection">×îÊæ·ş<br>
+	<input type="radio" name="selection" checked>æ—¶é—´æœ€çŸ­<br>
+	<input type="radio" name="selection">æœ€ä¾¿å®œ<br>
+	<input type="radio" name="selection">æœ€èˆ’æœ<br>
 	</div>
-	<form action = "Subway.java" method = "post">
-		<input type="submit" value ="²éÑ¯" >
+	
+
+		<input type="submit" value ="æŸ¥è¯¢" >
 	</form>
 	 </div>
 	 <div class="bottom">
 	 	<hr>
-	 	<div class="introduction">ÂÃ¿ÍĞĞ³ÌÖÇÄÜÍÆ¼öÏµÍ³</div>
+	 	<div class="introduction">æ—…å®¢è¡Œç¨‹æ™ºèƒ½æ¨èç³»ç»Ÿ</div>
 	 </div>
 
 	</body>

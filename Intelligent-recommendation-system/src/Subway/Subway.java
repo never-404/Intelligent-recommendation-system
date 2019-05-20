@@ -479,7 +479,7 @@ public class Subway {
 		String endStation = request.getParameter("endStation");
 		
 		//Subway sw = new Subway();
-		//sw.calculate(new Station(startStation,""), new Station(endStation,""));
+		//sw.calculate(new Station("南京站",""), new Station("小行站",""));
 		
 	}
 	
@@ -503,7 +503,7 @@ public class Subway {
 	public static void main(String[] args) {
 		long t1 = System.currentTimeMillis();
 		Subway sw = new Subway();
-		//sw.calculate(new Station("南京站",""), new Station("小行站",""));
+		sw.calculate(new Station("南京站",""), new Station("小行站",""));
 		//sw.calculate(new Station(startStation,""), new Station(endStation,""));
 		long t2 = System.currentTimeMillis();
 		System.out.println();
