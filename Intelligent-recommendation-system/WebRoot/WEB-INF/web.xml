@@ -4,7 +4,29 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-  <display-name></display-name>	
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>station</servlet-name>
+    <servlet-class>servlet.station</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>stationCalcu</servlet-name>
+    <servlet-class>servlet.stationCalcu</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>station</servlet-name>
+    <url-pattern>/servlet/station</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>stationCalcu</servlet-name>
+    <url-pattern>/servlet/stationCalcu</url-pattern>
+  </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

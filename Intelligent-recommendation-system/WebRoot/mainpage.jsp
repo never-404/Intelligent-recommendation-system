@@ -179,19 +179,19 @@
 	<div class="main">
 		<div class="begin">
 		出发地
-    	<select>
-    		<option>南昌</option>
-    		<option>北京</option>
-    		<option>黑龙江</option>
+    	<select name="startStation">
+    		<option>南京站</option>
+    		<option>中华门站</option>
+    		<option>玄武门站</option>
     	</select>
 		</div>
         <br>
         <div class="arrive">
     	目的地
-    	<select>
-    		<option>南昌</option>
-    		<option>北京</option>
-    		<option>黑龙江</option>
+    	<select name="endStation">
+    		<option>南京站</option>
+    		<option>小行站</option>
+    		<option>安德门站</option>
     	</select>
     	</div>
         <br>
@@ -201,8 +201,8 @@
 	<input type="radio" name="selection">最便宜<br>
 	<input type="radio" name="selection">最舒服<br>
 	</div>
-	<form action = "result.jsp" method = "post">
-		<input type="submit" value ="查询">
+	<form action = "Subway.java" method = "post">
+		<input type="submit" value ="查询" >
 	</form>
 	 </div>
 	 <div class="bottom">
