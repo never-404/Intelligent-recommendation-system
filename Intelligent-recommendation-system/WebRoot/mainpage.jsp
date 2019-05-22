@@ -1,4 +1,4 @@
-<%@ page language="java" contentType= "text/html;charset=UTF-8" %>
+<%@ page language="java" contentType= "text/html;charset=utf-8" %>
 <html>
 
 	<head>
@@ -179,10 +179,9 @@
 	<div class="main">
 	<form action = "servlet/queryWithServlet" method = "post">
 		<div class="begin">
-		出发地：<input type="text" name="account"><br>
-		
-    	<select name="startStation1">
-    		<option value="万寿路">万寿路</option>
+		出发地
+    	<select name="startStation">
+    		<option value="南京站">南京站</option>
     		<option value="古城">古城</option>
     		<option value="四惠东">四惠东</option>
     	</select>
@@ -193,8 +192,8 @@
     	目的地
     	<select name="endStation">
     		<option>南京站</option>
-    		<option>小行站</option>
-    		<option>安德门站</option>
+    		<option value="小行站">小行站</option>
+    		<option value="安德门站">安德门站</option>
     	</select>
     	</div>
         <br>
@@ -204,9 +203,7 @@
 	<input type="radio" name="selection">最便宜<br>
 	<input type="radio" name="selection">最舒服<br>
 	</div>
-	
-
-		<input type="submit" value ="查询" >
+	<input type="submit" value ="查询" >
 	</form>
 	 </div>
 	 <div class="bottom">

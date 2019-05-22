@@ -27,6 +27,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
 /**
 
  * desc:构造数据关系（以南京地铁站1\2\3\10号线为例）
@@ -168,6 +170,10 @@ class Station {
 	//本站到某一个目标站(key)所经过的所有站集合(value)，保持前后顺序
 
 	private Map<Station,LinkedHashSet<Station>> orderSetMap = new HashMap<Station,LinkedHashSet<Station>>();
+	public Station (String name){
+		this.name = name;
+
+	}
 	public Station (String name,String num){
 		this.name = name;
 		this.num = num;
@@ -464,26 +470,6 @@ public class Subway {
 
 	
 	
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-        doPost(request,response);
-	}
- 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out = response.getWriter();
-		
-		String  startStation = request.getParameter("startStation");
-		String endStation = request.getParameter("endStation");
-		
-		//Subway sw = new Subway();
-		//sw.calculate(new Station("南京站",""), new Station("小行站",""));
-		
-	}
-	
-	
 	
 	
 	
@@ -503,8 +489,14 @@ public class Subway {
 	public static void main(String[] args) {
 		long t1 = System.currentTimeMillis();
 		Subway sw = new Subway();
-		sw.calculate(new Station("南京站",""), new Station("小行站",""));
-		//sw.calculate(new Station(startStation,""), new Station(endStation,""));
+
+		
+		Station startStation1 = new Station("南京站","");
+		Station endStation1 = new Station("安德门站","");
+		
+		
+		//sw.calculate(new Station("南京站"), new Station("小行站"));
+		sw.calculate(startStation1, endStation1);
 		long t2 = System.currentTimeMillis();
 		System.out.println();
 		System.out.println("耗时："+(t2-t1)+"ms");
