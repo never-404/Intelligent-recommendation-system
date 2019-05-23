@@ -177,7 +177,7 @@
      <h1>欢迎来到never-404！</h1>
 	 
 	<div class="main">
-	<form action = "servlet/queryWithServlet" method = "post">
+	<form action = "servlet/queryWithServlet1" method = "post">
 		<div class="begin">
 		出发地
     	<select name="startStation">

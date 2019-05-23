@@ -1,4 +1,4 @@
-package Subway;
+package servlet;
 
  
 
@@ -281,10 +281,11 @@ public class Subway {
 
 	private List<Station> outList = new ArrayList<Station>();//记录已经分析过的站点
 	Station startStation,endStation; 
-	static String startRoute[] = new String[30];
-	static String  endRoute[] = new String[30];
-	static String Route[] = new String[30];
-	static String RouteNum[] = new String[30];
+	String startRoute[] = new String[30];
+	String endRoute[]   = new String[30];
+	String Route[]      = new String[30];
+	String RouteNum[]   = new String[30];
+	int i=0,k=0;
 	//计算从s1站到s2站的最短经过路径
 
 	public void calculate(Station s1,Station s2){
@@ -292,7 +293,7 @@ public class Subway {
 		if(outList.size() == DataBuilder.totalStaion){
 
 			System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
-			int i=0,k=0;
+
 			startStation = s1;
 			endStation = s1;
 			startRoute[i] = startStation.getName();
