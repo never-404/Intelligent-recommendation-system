@@ -292,7 +292,7 @@ public class Subway {
 
 		if(outList.size() == DataBuilder.totalStaion){
 
-			System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
+			//System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
 
 			startStation = s1;
 			endStation = s1;
@@ -305,7 +305,7 @@ public class Subway {
 					RouteNum[k-1] = station.getNum();
 				}
 				k++;
-				System.out.print(station.getNum()+station.getName()+"->");
+				//System.out.print(station.getNum()+station.getName()+"->");
 				
 				if((station.getNum() != endStation.getNum()) && (endStation.getNum()!= "")){
 					i++;
@@ -320,15 +320,15 @@ public class Subway {
 			}
 			
 			
-			System.out.println();
+			//System.out.println();
 			endRoute[i] = s2.getName();
 			
 			for(int j = 0;j<=i;j++){
-				System.out.print("j:  "+j+"  ");
-				System.out.println("startRoute:"+startRoute[j]+"endRoute:"+endRoute[j]);
+				//System.out.print("j:  "+j+"  ");
+				//System.out.println("startRoute:"+startRoute[j]+"endRoute:"+endRoute[j]);
 			}
 			for(int j = 0;j<k;j++){
-				System.out.print(RouteNum[j]+"号线"+Route[j]+"->");
+				//System.out.print(RouteNum[j]+"号线"+Route[j]+"->");
 			}
 			return;
 		}
@@ -348,9 +348,9 @@ public class Subway {
 
 		Station parent = getShortestPath(s1);//获取距离起点站s1最近的一个站（有多个的话，随意取一个）
 		if(parent == s2){
-			System.out.println("找到目标站点："+s2+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
+			//System.out.println("找到目标站点："+s2+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
 			for(Station station : s1.getAllPassedStations(s2)){
-				System.out.print(station.getName()+"->");
+				//System.out.print(station.getName()+"->");
 			}
 
 			return;
@@ -499,8 +499,8 @@ public class Subway {
 		//sw.calculate(new Station("南京站"), new Station("小行站"));
 		sw.calculate(startStation1, endStation1);
 		long t2 = System.currentTimeMillis();
-		System.out.println();
-		System.out.println("耗时："+(t2-t1)+"ms");
+		//System.out.println();
+		//System.out.println("耗时："+(t2-t1)+"ms");
 		
 		
 

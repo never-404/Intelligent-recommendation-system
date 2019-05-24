@@ -13,6 +13,6 @@ ${startStation}
 		 <c:forEach items="${stations}" var="station">
 		 ${station}
 		 </c:forEach>
-
+<BR>
     </body>
 </html>

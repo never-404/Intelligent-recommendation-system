@@ -1,4 +1,4 @@
-package Subway;
+/*package Subway;
 
  
 
@@ -28,19 +28,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-
-/**
-
- * desc:构造数据关系（以南京地铁站1\2\3\10号线为例）
-
- * @author chaisson
-
- * @since 2015-5-31 上午10:23:52
-
- *
-
- */
-
 class DataBuilder {
 
 
@@ -68,7 +55,7 @@ class DataBuilder {
 			}
 		}
 
-		/*******************************************************************************/
+
 		//2号线
 		String line2Str = "油坊桥站、雨润大街站、元通站、奥体东站、兴隆大街站、集庆门大街站、云锦路站、莫愁湖站、汉中门站、上海路站、新街口站、大行宫站、西安门站、明故宫站、苜蓿园站、下马坊站、孝陵卫站、钟灵街站、马群站、金马路站、仙鹤门站、学则路站、仙林中心站、羊山公园站、南大仙林校区站、经天路站";
 
@@ -84,7 +71,7 @@ class DataBuilder {
 			}
 		}
 
-		/*******************************************************************************/
+
 		//3号线
 		String line3Str = "林场站、星火路站、东大成贤学院站、泰冯路站、天润城站、柳洲东路站、上元门站、五塘广场站、小市站、南京站、南京林业大学·新庄站、鸡鸣寺站、浮桥站、大行宫站、常府街站、夫子庙站、武定门站、雨花门站、卡子门站、大明路站、明发广场站、南京南站、宏运大道站、胜太西路站、天元西路站、九龙湖站、诚信大道站、东大九龙湖校区站、秣周东路站";
 
@@ -99,7 +86,7 @@ class DataBuilder {
 				line3.get(i+1).prev = line3.get(i);
 			}
 		}
-        /*******************************************************************************/		
+	
 		//10号线
 
 		String line10Str = "雨山路站、文德路站、龙华路站、南京工业大学站、浦口万汇城站、临江站、江心洲站、绿博园站、梦都大街站、奥体中心站、元通站、中胜站、小行站、安德门站";
@@ -115,7 +102,7 @@ class DataBuilder {
 			}
 		}
 
-		/*******************************************************************************/		
+		
 		//s1号线
 
 		String lineS1Str = "南京南站、翠屏山站、河海大学·佛城西路站、吉印大道站、正方中路站、翔宇路北站、翔宇路南站、禄口机场站";
@@ -130,7 +117,7 @@ class DataBuilder {
 			}
 		}
 
-		/*******************************************************************************/		
+		
 
 		//s8号线
 		String lineS8Str = "泰山新村站、泰冯路站、高新开发区站、信息工程大学站、卸甲甸站、大厂站、葛塘站、长芦站、化工园站、六合开发区站、龙池站、雄州站、凤凰山公园站、方州广场站、沈桥站、八百桥站、金牛湖站";
@@ -156,9 +143,7 @@ class DataBuilder {
 	}
 }
 
-/**
- * desc：地铁站对象
- */
+
 
 class Station {
 	private String name; //地铁站名称，假设具备唯一性
@@ -202,82 +187,40 @@ class Station {
 			LinkedHashSet<Station> set = new LinkedHashSet<Station>(); 
 			set.add(this);
 			orderSetMap.put(station, set);
-
 		}
-
 		return orderSetMap.get(station);
-
 	}
-
- 
 
 	public Map<Station, LinkedHashSet<Station>> getOrderSetMap() {
-
 		return orderSetMap;
-
 	}
 
-	
 
 	@Override
-
 	public boolean equals(Object obj) {
-
 		if(this == obj){
-
 			return true;
-
 		} else if(obj instanceof Station){
-
 			Station s = (Station) obj;
-
 			if(s.getName().equals(this.getName())){
-
 				return true;
-
 			} else {
-
 				return false;
-
 			}
-
 		} else {
-
 			return false;
-
 		}
-
 	}
 
-	
 
 	@Override
-
 	public int hashCode() {
-
 		return this.getName().hashCode();
-
 	}
-
 }
 
 
-
-/**
-
- * desc：利用Dijkstra算法，计算地铁站经过路径，以南京地铁为例
-
- * @author chaisson
-
- * @since 2015-5-31 上午9:43:38
-
- *
-
- */
-
 public class Subway {
-
-	
 
 	private List<Station> outList = new ArrayList<Station>();//记录已经分析过的站点
 	Station startStation,endStation; 
@@ -305,7 +248,6 @@ public class Subway {
 				}
 				k++;
 				System.out.print(station.getNum()+station.getName()+"->");
-				
 				if((station.getNum() != endStation.getNum()) && (endStation.getNum()!= "")){
 					i++;
 					startStation = station;
@@ -333,11 +275,9 @@ public class Subway {
 		}
 		if(!outList.contains(s1)){
 			outList.add(s1);
-
 		}
 
 		//如果起点站的OrderSetMap为空，则第一次用起点站的前后站点初始化之
-
 		if(s1.getOrderSetMap().isEmpty()){
 			List<Station> Linkedstations = getAllLinkedStations(s1);
 			for(Station s : Linkedstations){
@@ -351,140 +291,71 @@ public class Subway {
 			for(Station station : s1.getAllPassedStations(s2)){
 				System.out.print(station.getName()+"->");
 			}
-
 			return;
-
 		}
-
 		for(Station child : getAllLinkedStations(parent)){
-
 			if(outList.contains(child)){
-
 				continue;
-
 			}
 
 			int shortestPath = (s1.getAllPassedStations(parent).size()-1) + 1;//前面这个1表示计算路径需要去除自身站点，后面这个1表示增加了1站距离
-
 			if(s1.getAllPassedStations(child).contains(child)){
-
 				//如果s1已经计算过到此child的经过距离，那么比较出最小的距离
-
 				if((s1.getAllPassedStations(child).size()-1) > shortestPath){
-
 					//重置S1到周围各站的最小路径
-
 					s1.getAllPassedStations(child).clear();
-
 					s1.getAllPassedStations(child).addAll(s1.getAllPassedStations(parent));
-
 					s1.getAllPassedStations(child).add(child);
-
 				}
-				
 			} else {
-
 				//如果s1还没有计算过到此child的经过距离
-
 				s1.getAllPassedStations(child).addAll(s1.getAllPassedStations(parent));
-
 				s1.getAllPassedStations(child).add(child);
-
 			}
-
 		}
-
 		outList.add(parent);
-
 		calculate(s1,s2);//重复计算，往外面站点扩展
-
 	}
 
-	
 
 	//取参数station到各个站的最短距离，相隔1站，距离为1，依次类推
-
 	private Station getShortestPath(Station station){
-
 		int minPatn = Integer.MAX_VALUE;
-
 		Station rets = null;
-
 		for(Station s :station.getOrderSetMap().keySet()){
-
 			if(outList.contains(s)){
-
 				continue;
-
 			}
 
 			LinkedHashSet<Station> set  = station.getAllPassedStations(s);//参数station到s所经过的所有站点的集合
-
 			if(set.size() < minPatn){
 
 				minPatn = set.size();
-
 				rets = s;
-
 			}
-
 		}
-
 		return rets;
 
 	}
 
-	
-
 	//获取参数station直接相连的所有站，包括交叉线上面的站
-
 	private List<Station> getAllLinkedStations(Station station){
-
 		List<Station> linkedStaions = new ArrayList<Station>();
-
 		for(List<Station> line : DataBuilder.lineSet){
-
 			if(line.contains(station)){//如果某一条线包含了此站，注意由于重写了hashcode方法，只有name相同，即认为是同一个对象
-
 				Station s = line.get(line.indexOf(station));
-
 				if(s.prev != null){
-
 					linkedStaions.add(s.prev);
-
 				}
-
 				if(s.next != null){
-
 					linkedStaions.add(s.next);
-
 				}
-
 			}
-
 		}
-
 		return linkedStaions;
-
 	}
 
-	
-	
-	
-	
-	
 
-	/**
-
-	 * desc: How to use the method
-
-	 * author chaisson
-
-	 * since 2015-5-31
-
-	 * version 1.0
-
-	 */
 
 	public static void main(String[] args) {
 		long t1 = System.currentTimeMillis();
@@ -506,3 +377,4 @@ public class Subway {
 	}
 }
 
+*/

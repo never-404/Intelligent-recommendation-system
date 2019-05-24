@@ -67,24 +67,25 @@ public class queryWithServlet1 extends HttpServlet {
 			
 			Subway sw = new Subway();
 			ArrayList stations=(ArrayList)session.getAttribute("stations");
-			if(stations == null){
+			//if(stations == null){
 				stations = new ArrayList();
 				session.setAttribute("stations", stations);
-			}
+		//	}
 	
 			sw.calculate(startStation1, endStation1);
 			
 			//换成起始站
 			for(j = 0;j<=sw.i;j++){
-				out.print("j:  "+j+"  ");
+				//out.print("j:  "+j+"  ");
 				//out.println("startRoute:"+sw.startRoute[j]+"endRoute:"+sw.endRoute[j]+"<br/>");
 		
 			}
 			//整体路线
-			for(j = 0;j<sw.k;j++){
+			for(j = 0;j<sw.k-1;j++){
 				//out.print(sw.RouteNum[j]+"号线"+sw.Route[j]+"->");
 				stations.add(sw.RouteNum[j]+"号线"+sw.Route[j]+"->");
 			}
+			stations.add(sw.RouteNum[sw.k-1]+"号线"+sw.Route[sw.k-1]);
 			j=0;
 	
 			session.setAttribute("startStation",startStation);
