@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*,java.sql.*" contentType="text/html; charset=UTF-8"%>
 <%@ page import="DAO.stationDao" %>
 <%@ page import= "javabean.station"%>
-<%@ page import= "Subway.Subway"%>
+<%@ page import= "servlet.Subway"%>
 
 <html>
 	<body>  

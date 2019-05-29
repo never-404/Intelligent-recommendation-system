@@ -191,7 +191,7 @@
         <div class="arrive">
     	目的地
     	<select name="endStation">
-    		<option>南京站</option>
+    		<option value="南京站">南京站</option>
     		<option value="小行站">小行站</option>
     		<option value="安德门站">安德门站</option>
     	</select>

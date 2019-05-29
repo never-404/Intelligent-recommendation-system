@@ -6,13 +6,21 @@
 
 <html>
 	<body>  
-路线为：
-
-${startStation}
-<BR>
+起始站：${startStation}<br>
+终点站：${endStation}<br>
 		 <c:forEach items="${stations}" var="station">
 		 ${station}
 		 </c:forEach>
 <BR>
+
+		 <c:forEach items="${Routes}" var="Route">
+		 ${Route}
+		 </c:forEach>
+<BR>
+
+
+
+
+
     </body>
 </html>
