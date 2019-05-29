@@ -1,7 +1,5 @@
 package servlet;
 
- 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -29,21 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-/**
-
- * desc:构造数据关系（以南京地铁站1\2\3\10号线为例）
-
- * @author chaisson
-
- * @since 2015-5-31 上午10:23:52
-
- *
-
- */
-
 class DataBuilder {
-
-
 	public static List<Station> line1 = new ArrayList<Station>();//1号线
 	public static List<Station> line2 = new ArrayList<Station>();//2号线
 	public static List<Station> line3 = new ArrayList<Station>();//3号线
@@ -83,7 +67,6 @@ class DataBuilder {
 				line2.get(i+1).prev = line2.get(i);
 			}
 		}
-
 		/*******************************************************************************/
 		//3号线
 		String line3Str = "林场站、星火路站、东大成贤学院站、泰冯路站、天润城站、柳洲东路站、上元门站、五塘广场站、小市站、南京站、南京林业大学·新庄站、鸡鸣寺站、浮桥站、大行宫站、常府街站、夫子庙站、武定门站、雨花门站、卡子门站、大明路站、明发广场站、南京南站、宏运大道站、胜太西路站、天元西路站、九龙湖站、诚信大道站、东大九龙湖校区站、秣周东路站";
@@ -202,11 +185,8 @@ class Station {
 			LinkedHashSet<Station> set = new LinkedHashSet<Station>(); 
 			set.add(this);
 			orderSetMap.put(station, set);
-
 		}
-
 		return orderSetMap.get(station);
-
 	}
 
  
@@ -214,51 +194,30 @@ class Station {
 	public Map<Station, LinkedHashSet<Station>> getOrderSetMap() {
 
 		return orderSetMap;
-
 	}
-
-	
 
 	@Override
 
 	public boolean equals(Object obj) {
-
 		if(this == obj){
-
 			return true;
-
 		} else if(obj instanceof Station){
-
 			Station s = (Station) obj;
-
 			if(s.getName().equals(this.getName())){
-
 				return true;
-
 			} else {
-
 				return false;
-
 			}
-
 		} else {
-
 			return false;
-
 		}
-
 	}
-
-	
 
 	@Override
 
 	public int hashCode() {
-
 		return this.getName().hashCode();
-
 	}
-
 }
 
 
@@ -268,16 +227,11 @@ class Station {
  * desc：利用Dijkstra算法，计算地铁站经过路径，以南京地铁为例
 
  * @author chaisson
-
  * @since 2015-5-31 上午9:43:38
-
  *
-
  */
 
 public class Subway {
-
-	
 
 	private List<Station> outList = new ArrayList<Station>();//记录已经分析过的站点
 	Station startStation,endStation; 
@@ -287,13 +241,9 @@ public class Subway {
 	String RouteNum[]   = new String[30];
 	int i=0,k=0;
 	//计算从s1站到s2站的最短经过路径
-
 	public void calculate(Station s1,Station s2){
-
 		if(outList.size() == DataBuilder.totalStaion){
-
 			//System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
-
 			startStation = s1;
 			endStation = s1;
 			startRoute[i] = startStation.getName();
@@ -334,7 +284,6 @@ public class Subway {
 		}
 		if(!outList.contains(s1)){
 			outList.add(s1);
-
 		}
 
 		//如果起点站的OrderSetMap为空，则第一次用起点站的前后站点初始化之
@@ -352,90 +301,53 @@ public class Subway {
 			for(Station station : s1.getAllPassedStations(s2)){
 				//System.out.print(station.getName()+"->");
 			}
-
 			return;
-
 		}
 
 		for(Station child : getAllLinkedStations(parent)){
-
 			if(outList.contains(child)){
-
 				continue;
-
 			}
 
 			int shortestPath = (s1.getAllPassedStations(parent).size()-1) + 1;//前面这个1表示计算路径需要去除自身站点，后面这个1表示增加了1站距离
-
 			if(s1.getAllPassedStations(child).contains(child)){
-
 				//如果s1已经计算过到此child的经过距离，那么比较出最小的距离
-
 				if((s1.getAllPassedStations(child).size()-1) > shortestPath){
-
 					//重置S1到周围各站的最小路径
-
 					s1.getAllPassedStations(child).clear();
-
 					s1.getAllPassedStations(child).addAll(s1.getAllPassedStations(parent));
-
 					s1.getAllPassedStations(child).add(child);
-
 				}
-				
 			} else {
-
 				//如果s1还没有计算过到此child的经过距离
-
 				s1.getAllPassedStations(child).addAll(s1.getAllPassedStations(parent));
-
 				s1.getAllPassedStations(child).add(child);
-
 			}
-
 		}
 
 		outList.add(parent);
-
 		calculate(s1,s2);//重复计算，往外面站点扩展
-
 	}
 
 	
 
 	//取参数station到各个站的最短距离，相隔1站，距离为1，依次类推
-
 	private Station getShortestPath(Station station){
-
 		int minPatn = Integer.MAX_VALUE;
-
 		Station rets = null;
-
 		for(Station s :station.getOrderSetMap().keySet()){
-
 			if(outList.contains(s)){
-
 				continue;
-
 			}
 
 			LinkedHashSet<Station> set  = station.getAllPassedStations(s);//参数station到s所经过的所有站点的集合
-
 			if(set.size() < minPatn){
-
 				minPatn = set.size();
-
 				rets = s;
-
 			}
-
 		}
-
 		return rets;
-
 	}
-
-	
 
 	//获取参数station直接相连的所有站，包括交叉线上面的站
 

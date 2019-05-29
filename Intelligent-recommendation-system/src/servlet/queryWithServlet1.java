@@ -30,14 +30,10 @@ public class queryWithServlet1 extends HttpServlet {
 		// Put your code here
 	}
 
-
-
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doPost(request,response);
 	}
-
-
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -46,8 +42,6 @@ public class queryWithServlet1 extends HttpServlet {
 			request.getRequestDispatcher("/result.jsp").forward(request, response);
 		}
 	}
-	
-	
 
 	private boolean RouteCalculate(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -95,12 +89,7 @@ public class queryWithServlet1 extends HttpServlet {
 		else{
 			return false;
 		}
-			
-
 }
-	
-	
-	
 	
 
 	/**
@@ -111,5 +100,4 @@ public class queryWithServlet1 extends HttpServlet {
 	public void init() throws ServletException {
 		// Put your code here
 	}
-
 }
