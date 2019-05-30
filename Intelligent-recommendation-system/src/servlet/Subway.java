@@ -243,11 +243,13 @@ public class Subway {
 	//计算从s1站到s2站的最短经过路径
 	public void calculate(Station s1,Station s2){
 		if(outList.size() == DataBuilder.totalStaion){
-			//System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
+			System.out.println("找到目标站点："+s2.getNum()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
 			startStation = s1;
 			endStation = s1;
-			startRoute[i] = startStation.getName();
-
+			startRoute[i+1] = startStation.getName();
+			startRoute[i] = startStation.getNum();
+			i++;
+			
 			for(Station station : s1.getAllPassedStations(s2)){
 				Route[k] = station.getName();
 				RouteNum[k] = station.getNum();
@@ -255,13 +257,15 @@ public class Subway {
 					RouteNum[k-1] = station.getNum();
 				}
 				k++;
-				//System.out.print(station.getNum()+station.getName()+"->");
+				
 				
 				if((station.getNum() != endStation.getNum()) && (endStation.getNum()!= "")){
-					i++;
+					i = i+2;
 					startStation = station;
+					startRoute[i-1] = endStation.getNum();
 					startRoute[i] = endStation.getName();
-					endRoute[i-1] = endStation.getName();
+					endRoute[i-3] = endStation.getNum();
+					endRoute[i-2] = endStation.getName();
 					endStation = station;
 				}
 				else{
@@ -270,7 +274,8 @@ public class Subway {
 			}
 			
 			
-			//System.out.println();
+			//System.out.println(RouteNum[k-1]);
+			endRoute[i-1] = RouteNum[k-1];
 			endRoute[i] = s2.getName();
 			
 			for(int j = 0;j<=i;j++){
@@ -404,8 +409,8 @@ public class Subway {
 		Subway sw = new Subway();
 
 		
-		Station startStation1 = new Station("南京站","");
-		Station endStation1 = new Station("安德门站","");
+		Station startStation1 = new Station("苹果园站","");
+		Station endStation1 = new Station("钟灵街站","");
 		
 		
 		//sw.calculate(new Station("南京站"), new Station("小行站"));

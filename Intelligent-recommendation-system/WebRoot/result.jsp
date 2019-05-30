@@ -8,6 +8,7 @@
 	<body>  
 起始站：${startStation}<br>
 终点站：${endStation}<br>
+花费时长:<br>
 		 <c:forEach items="${stations}" var="station">
 		 ${station}
 		 </c:forEach>
@@ -16,9 +17,13 @@
 		 <c:forEach items="${Routes}" var="Route">
 		 ${Route}
 		 </c:forEach>
+		 
 <BR>
 
-
+		 <c:forEach items="${sums}" var="sum">
+		 ${sum}
+		 </c:forEach>
+<BR>
 
 
 

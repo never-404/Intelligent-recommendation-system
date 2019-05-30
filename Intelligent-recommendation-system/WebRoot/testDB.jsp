@@ -8,10 +8,10 @@
 
 	车站为：
       <%
-		String station1 = request.getParameter("account");
+		//String station1 = request.getParameter("account");
         stationDao sdao= new stationDao();
-       	ArrayList stations= sdao.queryAllStations(station1);
-       	//out.println(station1);
+       	ArrayList stations= sdao.queryTime("苹果园","1号线");
+ 
 		%>
 		<table border=2>
 			<tr>

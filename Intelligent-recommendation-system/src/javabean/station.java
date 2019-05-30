@@ -5,8 +5,8 @@ public class station {
     private String subwayLine;
     private String direction;
     private String station;
-    private String startTime;
-    private String endTime;
+    private int startTime;
+    private int endTime;
     
 	public String getSubwayLine() {
 		return subwayLine;
@@ -29,17 +29,17 @@ public class station {
 		this.station = station;
 	}
 
-	public String getStartTime() {
+	public int getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(String startTime) {
+	public void setStartTime(int startTime) {
 		this.startTime = startTime;
 	}
 	
-	public String getEndTime() {
+	public int getEndTime() {
 		return endTime;
 	}
-	public void setEndTime(String endTime) {
+	public void setEndTime(int endTime) {
 		this.endTime = endTime;
 	}
 

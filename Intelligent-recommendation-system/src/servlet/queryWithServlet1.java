@@ -1,10 +1,12 @@
 package servlet;
 
 import servlet.Subway;
+import DAO.stationDao;
+import javabean.station;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import java.sql.Connection;
 import java.util.List; 
 import java.util.ArrayList;
 import javax.servlet.ServletException;
@@ -60,8 +62,10 @@ public class queryWithServlet1 extends HttpServlet {
 			HttpSession session = request.getSession();
 			
 			Subway sw = new Subway();
+			stationDao sdao= new stationDao();
 			ArrayList stations=(ArrayList)session.getAttribute("stations");
 			ArrayList Routes=(ArrayList)session.getAttribute("Routes");
+			ArrayList sums=(ArrayList)session.getAttribute("sums");
 			//ArrayList endRoutes=(ArrayList)session.getAttribute("endRoutes");
 			//if(stations == null){
 				stations = new ArrayList();
@@ -70,19 +74,47 @@ public class queryWithServlet1 extends HttpServlet {
 				Routes = new ArrayList();
 				session.setAttribute("Routes",Routes);
 				
-				//endRoutes = new ArrayList();
-				//session.setAttribute("endRoutes", endRoutes);
+				sums = new ArrayList();
+				session.setAttribute("sums",sums);
+
 		//	}
 	
 			sw.calculate(startStation1, endStation1);
-			
+			ArrayList TurnPoints= new ArrayList();
+			int StarTime[]= new int[30];
+			int num=0;
+			int sum = 10;
 			//换成起始站
-			for(j = 0;j<=sw.i;j++){
-				//out.print("j:  "+j+"  ");
-				//out.println("startRoute:"+sw.startRoute[j]+"endRoute:"+sw.endRoute[j]+"<br/>");
-				Routes.add("startRoute:"+sw.startRoute[j]+"endRoute:"+sw.endRoute[j]+"<br/>");
+			for(j = 0;j<=sw.i;j=j+2){
+				
+				Routes.add("startRouteNum:  "+sw.endRoute[j]+"startRoute: "+sw.startRoute[j+1]+"<br/>"+"endRouteNum: "+sw.endRoute[j]+"endRoute: "+sw.endRoute[j+1]+"<br/>");
+				try {
+					
+					TurnPoints = sdao.queryTime(sw.startRoute[j+1],sw.startRoute[j]);
+					for(int k = 0;k<=TurnPoints.size();k++)
+					{
+						station TurnPoint=(station)TurnPoints.get(k);
+						StarTime[num]=TurnPoint.getStartTime();
+						num++;
+					}
+					
+					
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			
+			for(int k = 0;k<num;k++)
+			{
+				sum += StarTime[k+1]-StarTime[k];
+				
+			}
+			sums.add(sum);
+		
+			
+
 			//整体路线
 			for(j = 0;j<sw.k-1;j++){
 				//out.print(sw.RouteNum[j]+"号线"+sw.Route[j]+"->");
