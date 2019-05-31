@@ -11,56 +11,17 @@ import javax.management.Query;
 import java.util.*;
 
 
-//连接数据库
-class CityDao {
-
-	public ArrayList queryAllStudents() throws Exception {
-		Connection conn = null;
-		ArrayList cityflights= new ArrayList();
-		try {
-			//获取连接
-			Class.forName("com.mysql.jdbc.Driver");
-			String url="jdbc:mysql://localhost:3306/project";
-			conn = DriverManager.getConnection(url, "root", "123456");
-			// 运行SQL语句
-			String sql = 
-					"SELECT *  from 北京到上海航班  WHERE 出发时 = '11:30:00'";
-			Statement stat = conn.createStatement();
-			ResultSet rs = stat.executeQuery(sql);
-			while (rs.next()) {
-                //实例化VO
-				CityFlight cityflight = new CityFlight();
-				cityflight.setDepartureTime(rs.getString("出发时"));
-				System.out.println("输出："+cityflight.DepartureTime());
-				cityflights.add(cityflight);
-			}
-			rs.close();
-			stat.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {// 关闭连接
-				if (conn != null) {
-					conn.close();
-					conn = null;
-				}
-			} catch (Exception ex) {
-			}
-		}
-		return cityflights;
-	}
-}
 
 
 //航班
-class CityFlight{
+public class City{
 	
-	private String Flight;
-	private String DepartureTime;
-	private String DepartureStation;
-	private String ArrivalTime;
-	private String ArrivalStation;
-	private String Price;
+	public String Flight;
+	public String DepartureTime;
+	public String DepartureStation;
+	public String ArrivalTime;
+	public String ArrivalStation;
+	public String Price;
 	
 	
 	public String Flight() {
@@ -107,18 +68,6 @@ class CityFlight{
 }
 
 
-public class City{
-	
-	
-	public static void main(String args[]){
-		
-		ArrayList cityflights= new ArrayList();
-		CityDao query = new CityDao();
-		
-		
-	}
-	
-}
 
 
 
