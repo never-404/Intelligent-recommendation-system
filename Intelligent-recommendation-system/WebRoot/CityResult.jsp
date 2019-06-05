@@ -7,19 +7,11 @@
 
 
 <html>
-	<body>  
-
-	
+	<body>  	
 	<%
 		AF operation = new AF(new Graph(0), 0, 1);  
         operation.getResult(); 
-        String resultlines = operation.getResultLine();
-       
-
-
-		
-
-        
+        String resultlines = operation.getResultLine();         
 	 %>
 	路线为：<br><%=resultlines%>
 	<%

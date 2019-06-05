@@ -139,6 +139,39 @@
 	</head>
 	
 		<body>
+		<script  type="text/javascript">
+			function showResult1(){
+	  			
+		  		var xmlHttp=null;
+		  		if(window. XMLHttpRequest){ //Mozilla等浏览器
+	   			xmlHttp=new XMLHttpRequest();
+				}
+				else if(window.ActiveXObject){ //IE浏览器
+	    			try{
+						xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+					}catch(e){
+	        			try{
+	        				xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	        			}catch(e){
+	        				window.alert("该浏览器不支持AJAX");
+	                    }
+					}
+				}
+		  		var url = "servlet/queryWithServlet1";
+				xmlHttp.open("POST", url, true);				
+				xmlHttp.onreadystatechange=function() {
+					if (xmlHttp.readyState==4) {
+						resultDiv.innerHTML = xmlHttp.responseText;
+					}		
+					else{
+						resultDiv.innerHTML += "正在查询，请稍候......";
+					}	
+				};
+				xmlHttp.send();	
+			}
+		</script>
+		
+		
 		 <!--  导航栏开始 -->
 	    <div class="shortcut">
     	<div class="w">
@@ -176,7 +209,7 @@
      <h1>欢迎来到never-404！</h1>
 	 
 	<div class="main">
-	<form action = "servlet/queryWithServlet1" method = "post">
+	<form >
 		<div class="begin">
 		出发地
     	<select name="startStation">
@@ -202,7 +235,7 @@
 	<input type="radio" name="selection">最便宜<br>
 	<input type="radio" name="selection">最舒服<br>
 	</div>
-	<input type="submit" value ="查询" >
+	<input type="submit" value ="查询" onclick="showResult1()">
 	</form>
 	 </div>
 	 <div class="bottom">

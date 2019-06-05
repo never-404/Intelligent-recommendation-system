@@ -9,6 +9,9 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.util.List; 
 import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
@@ -39,12 +42,16 @@ public class queryWithServlet1 extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
+		
 		if(RouteCalculate(request,response)) {
-			request.getRequestDispatcher("/result.jsp").forward(request, response);
-		}
+			
+			ServletContext application = this.getServletContext();
+			RequestDispatcher rd = application.getRequestDispatcher("/result.jsp");
+			rd.forward(request, response);	
 	}
-
+	}
+	
 	private boolean RouteCalculate(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		if(request.getParameter("startStation")!=null&&request.getParameter("endStation")!=null){
@@ -130,7 +137,12 @@ public class queryWithServlet1 extends HttpServlet {
 		else{
 			return false;
 		}
+		
+		
+
 }
+	
+	
 	
 
 	/**
