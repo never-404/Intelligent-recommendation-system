@@ -181,7 +181,7 @@
 		<div class="begin">
 		出发地
     	<select name="startStation">
-    		<option value="南京站">南京站</option>
+    		<option value="五棵松站">五棵松站</option>
     		<option value="古城">古城</option>
     		<option value="四惠东">四惠东</option>
     	</select>
@@ -191,7 +191,7 @@
         <div class="arrive">
     	目的地
     	<select name="endStation">
-    		<option value="南京站">南京站</option>
+    		<option value="苹果园站">苹果园站</option>
     		<option value="小行站">小行站</option>
     		<option value="安德门站">安德门站</option>
     	</select>
