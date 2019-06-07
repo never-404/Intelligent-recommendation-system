@@ -53,7 +53,7 @@ public class PemissionFilter implements Filter {
                 // 未登录，跳转到登录页，并保证当前网页的url文件路径
                 req.setAttribute("msg", "您尚未登录，请登录");
                 req.setAttribute("return_uri", "mainpage.jsp");
-                RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
+                RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
                 rd.forward(req, res);
             }
         }

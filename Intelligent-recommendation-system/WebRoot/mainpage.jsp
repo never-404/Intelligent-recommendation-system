@@ -176,7 +176,19 @@
     }
 %>
   
-    				<a href="register.jsp" class="style-red">免费注册 </a>
+<%
+      if(flag.equals("login_success")) {
+      String userName = request.getParameter("userName");
+%>
+        <a href="register.jsp" class="style-red"><%=userName%> </a>
+<%
+    } else {
+%>
+        	<a href="register.jsp" class="style-red">免费注册</a>
+       
+<%
+    }
+%>   	
     			</li> 
     			<li class="spacer"></li>
     			<li>

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@page import="servlet.queryWithServlet1"%>
 <%
 String path = request.getContextPath();
@@ -22,7 +22,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    index     failed!!
+    请您登录再查看结果！
+    <form action="mainpage.jsp">
+    <input type="submit"  value ="返回首页面" >
+    </form>
     <br>
 
   </body>
