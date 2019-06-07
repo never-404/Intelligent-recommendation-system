@@ -136,10 +136,17 @@
 			margin-top:5px;
 			
 		}
+		.login{
+			float:left;
+			margin-top:2px;
+			margin-right:7px;
+		}
 </style>
 	</head>
-	
 		<body>
+
+		
+		
 		 <!--  导航栏开始 -->
 	    <div class="shortcut">
     	<div class="w">
@@ -150,7 +157,25 @@
     		</ul>
     		<ul class="fr">
     			<li>
-    				<a href="log.jsp">你好，请登录&nbsp;&nbsp;</a>
+    				<%
+    String flag = "";
+    Object object = session.getAttribute("flag");
+    if(object != null) {
+        flag = object.toString();
+    }
+    if(flag.equals("login_success")) {
+%>
+        <a href="<%= request.getContextPath() %>/LogoutServlet">退出</a>
+<%
+    } else {
+%>
+		<div class="login">
+        	<a href="<%= request.getContextPath() %>/login.jsp">登录</a><br/>
+        </div>
+<%
+    }
+%>
+  
     				<a href="register.jsp" class="style-red">免费注册 </a>
     			</li> 
     			<li class="spacer"></li>
@@ -182,8 +207,8 @@
 		出发地
     	<select name="startStation">
     		<option value="五棵松站">五棵松站</option>
-    		<option value="古城">古城</option>
-    		<option value="四惠东">四惠东</option>
+    		<option value="古城站">古城站</option>
+    		<option value="四惠东站">四惠东站</option>
     	</select>
 		</div>
         <br>
@@ -192,23 +217,20 @@
     	目的地
     	<select name="endStation">
     		<option value="苹果园站">苹果园站</option>
-    		<option value="小行站">小行站</option>
-    		<option value="安德门站">安德门站</option>
+    		<option value="复兴门站">复兴门站</option>
+    		<option value="崇文门站">崇文门站</option>
     	</select>
     	</div>
         <br>
 
-	<div class="radio">
-	<input type="radio" name="selection" checked>时间最短<br>
-	<input type="radio" name="selection">最便宜<br>
-	<input type="radio" name="selection">最舒服<br>
-	</div>
-	<input type="submit" value ="查询" >
+	<input type="submit"  value ="查询" >
 	</form>
 	 </div>
+	 
 	 <div class="bottom">
 	 	<hr>
 	 	<div class="introduction">旅客行程智能推荐系统</div>
+	 	</hr>
 	 </div>
 
 	</body>

@@ -40,7 +40,7 @@ class DataBuilder {
 	static {		
 
 		//1号线
-		String line1Str = "苹果园站、古站、八角游乐园站、八宝山站、玉泉路站、五棵松站、万寿路站、公主坟站、军事博物馆站、木樨地站、南礼士路站、复兴门站、西单站、天安门西站、天安门东站、王府井站、东单站、建国门站、永安里站、国贸站、大望路站、四惠站、四惠东站";
+		String line1Str = "苹果园站、古城站、八角游乐园站、八宝山站、玉泉路站、五棵松站、万寿路站、公主坟站、军事博物馆站、木樨地站、南礼士路站、复兴门站、西单站、天安门西站、天安门东站、王府井站、东单站、建国门站、永安里站、国贸站、大望路站、四惠站、四惠东站";
 		String[] line1Arr = line1Str.split("、");
 		for(String s : line1Arr){
 			line1.add(new Station(s,"1"));
@@ -241,7 +241,7 @@ public class Subway {
 	String RouteNum[]   = new String[30];
 	int i=0,k=0;
 	//计算从s1站到s2站的最短经过路径
-	public void calculate(Station s1,Station s2){
+	public int calculate(Station s1,Station s2){
 		if(outList.size() == DataBuilder.totalStaion){
 			//System.out.println("找到目标站点："+s2.getName()+"，共经过"+(s1.getAllPassedStations(s2).size()-1)+"站");
 			startStation = s1;
@@ -280,7 +280,7 @@ public class Subway {
 			for(int j = 0;j<k;j++){
 				//System.out.print(RouteNum[j]+"号线"+Route[j]+"->");
 			}
-			return;
+			return 0;
 		}
 		if(!outList.contains(s1)){
 			outList.add(s1);
@@ -301,7 +301,7 @@ public class Subway {
 			for(Station station : s1.getAllPassedStations(s2)){
 				//System.out.print(station.getName()+"->");
 			}
-			return;
+			return 0;
 		}
 
 		for(Station child : getAllLinkedStations(parent)){
@@ -327,6 +327,8 @@ public class Subway {
 
 		outList.add(parent);
 		calculate(s1,s2);//重复计算，往外面站点扩展
+		
+		return 1;
 	}
 
 	

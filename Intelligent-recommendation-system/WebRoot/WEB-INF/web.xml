@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" 
-	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
@@ -11,97 +11,87 @@
     <servlet-name>station</servlet-name>
     <servlet-class>servlet.station</servlet-class>
   </servlet>
+    <servlet-mapping>
+    <servlet-name>station</servlet-name>
+    <url-pattern>/servlet/station</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>stationCalcu</servlet-name>
     <servlet-class>servlet.stationCalcu</servlet-class>
   </servlet>
+    <servlet-mapping>
+    <servlet-name>stationCalcu</servlet-name>
+    <url-pattern>/servlet/stationCalcu</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>queryWithServlet</servlet-name>
-    <servlet-class>servlet.queryWithServlet</servlet-class>
+　　<servlet-name>loginServlet</servlet-name>
+　　<servlet-class>filter.LoginServlet</servlet-class>
   </servlet>
+  	<servlet-mapping>
+　　	<servlet-name>loginServlet</servlet-name>
+　　	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+   	
+<servlet>
+　　<servlet-name>logoutServlet</servlet-name>
+　　<servlet-class>filter.LogoutServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+　　<servlet-name>logoutServlet</servlet-name>
+　　<url-pattern>/LogoutServlet</url-pattern>
+</servlet-mapping>
+  
+  
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>queryWithServlet1</servlet-name>
     <servlet-class>servlet.queryWithServlet1</servlet-class>
   </servlet>
+    <servlet-mapping>
+    <servlet-name>queryWithServlet1</servlet-name>
+    <url-pattern>/servlet/queryWithServlet1</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>ValidateServlet</servlet-name>
     <servlet-class>servlet.ValidateServlet</servlet-class>
   </servlet>
+ 
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>PemissionFilter</servlet-name>
-    <servlet-class>filter.PemissionFilter</servlet-class>
+    <servlet-name>showResults</servlet-name>
+    <servlet-class>servlet.showResults</servlet-class>
   </servlet>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>filter.LoginServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>LogoutServlet</servlet-name>
-    <servlet-class>filter.LogoutServlet</servlet-class>
-  </servlet>
-
-
-
-
-
-
-
-
   <servlet-mapping>
-    <servlet-name>station</servlet-name>
-    <url-pattern>/servlet/station</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>stationCalcu</servlet-name>
-    <url-pattern>/servlet/stationCalcu</url-pattern>
+    <servlet-name>showResults</servlet-name>
+    <url-pattern>/servlet/showResults</url-pattern>
   </servlet-mapping>
 
-  <servlet-mapping>
-    <servlet-name>queryWithServlet1</servlet-name>
-    <url-pattern>/servlet/queryWithServlet1</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>ValidateServlet</servlet-name>
-    <url-pattern>/servlet/ValidateServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>PemissionFilter</servlet-name>
-    <url-pattern>/servlet/PemissionFilter</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/servlet/LoginServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>LogoutServlet</servlet-name>
-    <url-pattern>/servlet/LogoutServlet</url-pattern>
-  </servlet-mapping>	
-  
-  
- <filter>
+<filter>
 　　<filter-name>pemissionFilter</filter-name>
 　　<filter-class>filter.PemissionFilter</filter-class>
 </filter>
-
 <filter-mapping>
 　　<filter-name>pemissionFilter</filter-name>
-　　<url-pattern>/mainpage.jsp</url-pattern>
+　　<url-pattern>/servlet/queryWithServlet1</url-pattern>
 </filter-mapping>
- 
+
+
+  
+
+  
+  
+  
  
  
   <welcome-file-list>

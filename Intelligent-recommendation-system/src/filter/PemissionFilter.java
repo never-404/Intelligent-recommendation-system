@@ -32,7 +32,7 @@ public class PemissionFilter implements Filter {
         // 获取登录状态
         String flag = (String) session.getAttribute("flag");
         /* 判断是否是登录页、首页、登录servlet */
-        if (servletPath != null && (servletPath.equals("/login.jsp") || servletPath.equals("/index.jsp") || servletPath.equals("/LoginServlet"))) {
+        if (servletPath != null && (servletPath.equals("/login.jsp") || servletPath.equals("/mainpage.jsp") || servletPath.equals("/LoginServlet"))) {
             // 是则直接转发到下一组件
             chain.doFilter(request, response);
         } else {
@@ -48,10 +48,11 @@ public class PemissionFilter implements Filter {
                     RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
                     rd.forward(req, res);
                 }
-            } else {
+            }
+            else {
                 // 未登录，跳转到登录页，并保证当前网页的url文件路径
                 req.setAttribute("msg", "您尚未登录，请登录");
-                req.setAttribute("return_uri", servletPath);
+                req.setAttribute("return_uri", "mainpage.jsp");
                 RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
                 rd.forward(req, res);
             }
