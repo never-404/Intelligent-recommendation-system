@@ -180,7 +180,7 @@
       if(flag.equals("login_success")) {
       String userName = request.getParameter("userName");
 %>
-        <a href="register.jsp" class="style-red"><%=userName%> </a>
+        <a href="mine.jsp" class="style-red"><%=userName%> </a>
 <%
     } else {
 %>
@@ -192,19 +192,11 @@
     			</li> 
     			<li class="spacer"></li>
     			<li>
-    				<a href="mine.jsp">个人中心</a>
-    			</li>
-    			<li class="spacer"></li>
-    			<li class="dropdown">
-    				<a href="#">我的行程</a>
-    			</li>
-    			<li class="spacer"></li>
-    			<li>
     				<a href="mine.jsp">用户反馈</a>
     			</li>
     	    	<li class="spacer"></li>
     			<li>
-    				<a href="#">关于我们</a>
+    				<a href="mine.jsp">关于我们</a>
     			</li>
     			<li class="spacer"></li>
     		</ul>
