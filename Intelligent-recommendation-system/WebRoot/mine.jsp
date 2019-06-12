@@ -30,21 +30,21 @@
 </style>
 	</head>
 	
-	<body style="background:url(background_yc.jpg) ;background-size:cover; ">
+	<body style="background:url(pic/background_yc.jpg) ;background-size:cover; ">
 	
-	<h1><img src="gundong.gif"  width="150"   height="80"><img src="nihao.png"  width="300"   height="200"><img src="gundong.gif"  width="150"   height="80"></h1>
+	<h1><img src="pic/gundong.gif"  width="150"   height="80"><a href="uploadForm.jsp"><img src="pic/touxiang.png"  width="150"   height="150"></a><img src="pic/gundong.gif"  width="150"   height="80"></h1>
 
-    	<img src="changeCity.png"  width="100"   height="50">
+    	<img src="pic/changeCity.png"  width="100"   height="50">
     	<select>
     		<option>南昌</option>
     		<option>北京</option>
     		<option>黑龙江</option>
     	</select>
         <br>
-        <img src="banben.png"  width="200"   height="100"><img src="dongtu.gif"  width="300"   height="50"> 
+        <img src="pic/banben.png"  width="200"   height="100"><img src="pic/dongtu.gif"  width="300"   height="50"> 
 
 	<form>
-		<img src="yijianliuyan.png"  width="200"   height="100">        <br>
+		<img src="pic/yijianliuyan.png"  width="200"   height="100">        <br>
 		<textarea rows="15" cols="150" style="background:transparent;border:1px solid #ffffff"></textarea><br>
 		<div class="a">
 			<input type="submit" value ="提交">
@@ -52,7 +52,7 @@
 		</div>
 	</form>
 	<hr>
-	<img src="guanyuwomen.png"  width="300"   height="50"> 
+	<img src="pic/guanyuwomen.png"  width="300"   height="50"> 
         <br>
 	<form action = "mainpage.jsp" method = "post">
 		<input type="submit" value ="返回">
