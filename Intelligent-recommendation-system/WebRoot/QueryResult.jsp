@@ -9,6 +9,13 @@
 
 
 <html>
+<style>
+				.buttom{
+					left:20px;
+				}
+
+				
+</style>
 	<body bgcolor=#E0FFFF>  
 
 	<center>
@@ -40,10 +47,10 @@
 		<table border = 2>
 			<tr>
 				<td>航班</td>
-				<td>出发时</td>
-				<td>出发机</td>
-				<td>到达时</td>
-				<td>到达机</td>
+				<td>出发时间</td>
+				<td>出发机场</td>
+				<td>到达时间</td>
+				<td>到达机场</td>
 				<td>价格</td>
 			</tr>
 		<%
@@ -65,6 +72,7 @@
 	
 	
 	</center>
-	
+	<div class="buttom">
+	<input type="button"  value="返回" onclick="javascript:history.back()" /></div>
   </body>
 </html>

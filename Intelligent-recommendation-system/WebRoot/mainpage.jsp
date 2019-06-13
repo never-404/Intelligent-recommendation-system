@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>XXX系统</title>
+		<title>地铁查询系统</title>
 	    <meta charset="utf-8">
 	    
 		<style type="text/css">
@@ -13,8 +13,8 @@
 
 		body
 		{
-			opacity:0.9;
-		background-color:#b9b6b252;
+		opacity:0.9;
+		background-color:#E0FFFF;
 		}
 		div.title
 		{
@@ -38,7 +38,8 @@
 			text-align:center;
 			color:#99696b;
 			margin-bottom:30px;
-			 font-family:"楷体";
+			 font-family:"幼圆";
+			 font-size:50px;
 		}
         div.a{
             text-align:center;
@@ -56,23 +57,20 @@
         	width:200px;
         	height:280px;
         	padding:5px 30px;
-        	background-color: #E3E4E5;
+        	background-color: #74c8bc;
         }
         .main option{
         font-family:"楷体";
         }
         .main .begin{
-        margin:auto;
+        width:100px;
+        position:absolute;
+        left:35px;
         font-size:25px;
         font-family:"楷体";
         padding:5px 20px;
         }
-         .main .arrive{
-        margin:auto;
-        font-size:25px;
-        font-family:"楷体";
-        padding:5px 20px;
-        }
+
         .main .radio{
         margin:auto;
         font-size:25px;
@@ -81,17 +79,20 @@
         }
         .main form input
         {
-        	margin:auto;
+			
+        	margin-top:130px;
         	padding:5px;
         	border:1px solid #3e3a37;
         	-webkit-border-radius:10px;
         }
         .main form{
         	padding:20px 73px;
+        	position:relative;
         }
 		.w {
 			width: 1190px;
 			margin: auto;
+			
 		}
 		.fr {
 			float: right;
@@ -110,7 +111,7 @@
 		}
 		.shortcut {
 			height: 30px;
-			background-color: #E3E4E5;
+			background-color:#E0FFFF;
 			border-bottom: 1px solid #DDD;
 			line-height: 30px;
 		}
@@ -141,6 +142,13 @@
 			margin-top:2px;
 			margin-right:7px;
 		}
+		.photo{
+			position:absolute;
+			left:0px;
+			bottom:55px;
+			
+		}
+
 </style>
 	</head>
 		<body>
@@ -156,6 +164,9 @@
     		    </li>
     		</ul>
     		<ul class="fr">
+    		<li>
+    				<a href="1.jsp">首页</a>
+    			</li>
     			<li>
     				<%
     String flag = "";
@@ -178,7 +189,7 @@
   
 <%
       if(flag.equals("login_success")) {
-      String userName = request.getParameter("userName");
+      String userName = "stydt";
 %>
         <a href="mine.jsp" class="style-red"><%=userName%> </a>
 <%
@@ -202,8 +213,13 @@
     		</ul>
     	</div>
     </div>
+    <div><br></div>
+    	<div align="center">
+			<img src="pic/flightQuery/car(1).gif" width = "800" height = "50" ><br>
+		</div>
+		<div><br></div>
      <!--  页面中心开始 -->
-     <h1>欢迎来到never-404！</h1>
+     <h1>北京地铁查询</h1>
 	 
 	<div class="main">
 	<form action = "servlet/queryWithServlet1" method = "post">
@@ -212,17 +228,24 @@
     	<select name="startStation">
     		<option value="五棵松站">五棵松站</option>
     		<option value="古城站">古城站</option>
-    		<option value="四惠东站">四惠东站</option>
+    		<option value="天安门西站">天安门西站</option>
+    		<option value="王府井站">王府井站</option>
+    		<option value="国贸站">国贸站</option>
+    		<option value="南礼士路站">南礼士路站</option>
+    		<option value="西单站">西单站</option>
     	</select>
-		</div>
         <br>
-        
-        <div class="arrive">
+         
+                <br>
     	目的地
     	<select name="endStation">
     		<option value="苹果园站">苹果园站</option>
     		<option value="复兴门站">复兴门站</option>
     		<option value="崇文门站">崇文门站</option>
+    		<option value="钟灵街站">钟灵街站</option>
+    		<option value="北京站">北京站</option>
+    		<option value="宣武门站">宣武门站</option>
+    		<option value="建国门站">建国门站</option>
     	</select>
     	</div>
         <br>
@@ -230,13 +253,16 @@
 	<input type="submit"  value ="查询" >
 	</form>
 	 </div>
-	 
+	 <div class="photo">
+          <img src="pic/flightQuery/goHome.jpg" width = "280" height = "200" ><br>
+     </div>
 	 <div class="bottom">
+	 
 	 	<hr>
 	 	<div class="introduction">旅客行程智能推荐系统</div>
 	 	</hr>
 	 </div>
-
+             	
 	</body>
 
 

@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
                     rd.forward(request, response);
                 } else {
                     // 不存在则跳转到首页
-                    rd = request.getRequestDispatcher("/mainpage.jsp");
+                    rd = request.getRequestDispatcher("/1.jsp");
                     rd.forward(request, response);
                 }
             	}

@@ -8,9 +8,7 @@
 
 
 <html>
-	<body>  
-
-	
+	<body>  	
 	<%
 		AF operation = new AF(new Graph(0), 0, 1);  
         operation.getResult(); 
@@ -20,9 +18,6 @@
 	路线为：<br><%=resultlines%>
 
 	*****************<br>
-	
-	
-	
 	
 	北京到上海航班1点以后的航班：<br>
 	<%

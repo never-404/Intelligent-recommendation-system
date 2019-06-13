@@ -23,6 +23,6 @@ public class LogoutServlet extends HttpServlet {
         // 注销session的值
         request.getSession().invalidate();
         // 将网页重定向到首页
-        response.sendRedirect(request.getContextPath() + "/mainpage.jsp");
+        response.sendRedirect(request.getContextPath() + "/1.jsp");
     }
 }

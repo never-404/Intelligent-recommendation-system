@@ -26,10 +26,11 @@ public class Query {
 		CityDao citydao = new CityDao();
 		String dataSource = "project";
 		String tableName = "北京到上海航班";
-		query.setQuerysql("SELECT 航班 FROM  北京到上海航班   WHERE 出发时 > '9:00:00';");
+		//query.setQuerysql("SELECT 航班 FROM  北京到上海航班   WHERE 出发时 > '9:00:00';");
 		citydao.setDatasourceName(dataSource);
 		citydao.setTableName(tableName);
-		citydao.setSQL(query.getQuerysql());
+		citydao.setSQL(getQuerysql());
+		//System.out.println("query.getQuerysql():"+query.getQuerysql());
 		return citydao.inputQueryFlight();
 	}
 	

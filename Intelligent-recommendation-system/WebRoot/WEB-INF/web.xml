@@ -46,7 +46,18 @@
 　　<url-pattern>/LogoutServlet</url-pattern>
 </servlet-mapping>
   
-  
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>servlet.UploadServlet</servlet-class>
+  </servlet>
+
+
+ <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/servlet/UploadServlet</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
@@ -85,10 +96,16 @@
 　　<filter-name>pemissionFilter</filter-name>
 　　<url-pattern>/servlet/queryWithServlet1</url-pattern>
 </filter-mapping>
-
- 
+<filter-mapping>
+　　<filter-name>pemissionFilter</filter-name>
+　　<url-pattern>/QueryResult.jsp</url-pattern>
+</filter-mapping>
+ <filter-mapping>
+　　<filter-name>pemissionFilter</filter-name>
+　　<url-pattern>/mine.jsp</url-pattern>
+</filter-mapping>
  
   <welcome-file-list>
-    <welcome-file>mainpage.jsp</welcome-file>
+    <welcome-file>1.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -27,18 +27,57 @@
 </script>
 
 <style>
-	div.table
+		body
 		{
-			margin:auto;
-			width:75%;
-			background-color:#b0e0e6;
+		opacity:0.9;
+		background-color:#E0FFFF;
+
 		}
+		.title
+		{
+			font-size: 300%
+
+		}
+	
+		h1	  {text-align: center}
+	    body{
+        font-size:20px;
+        font-family:"宋体";
+        background-image:url(circle.jpg);
+
+    	}
+        .a{
+				
+            text-align:center;
+            vertical-align:middle;
+            font-size:25px;
+        }
+        img{max-width: 100%; height:auto;}
+
 	div.button
 	{
 		padding-left:45%;
 	}
-	lable { float: center; width: 7em; margin-right:1em; text-align: right; }
-
+		.bottom{
+			width:100%;
+			position:fixed;
+			bottom:30px;
+		}
+		.bottom .introduction{
+			text-align:center;
+			font-size:13px;
+			margin-top:5px;
+			
+		}
+				.photo{
+			position:absolute;
+			left:0px;
+			bottom:55px;
+			
+		}
+		.info{
+		text-align:center;
+		}
 </style>
 
 </head>
@@ -52,22 +91,43 @@
         <%
             }
         %>
-        
-      用户名：<input type="text" name = "userName" />
-      密码：<input type="password" name = "password" /><br>
-	 请输入验证码:
-	<input type="text" name="code" size="10">
+         <br><br><br>
+         <center>
+        <img src="pic/flightQuery/never404_1.jpg" width = "280" height = "300" ></center>
+ <br><br>
+    <br>
+    <div class=a>
+      	用户名：<input type="text" name = "userName" /><br>
+     	密&nbsp码：<input type="password" name = "password" /><br>
+	 	验证码:
+	<input type="text" name="code" ><br>
 	<img name="imgValidate" src="validateMix.jsp" style="vertical-align: middle;">
 	<a onclick="refresh()" href="#" style="font-size: 10; text-decoration: none;">重新获取验证码</a>
 		
-      <input type="submit" value="提交" onclick="return check(this);"/>
-      <input type="reset" value="重置" />
+		
+	<br>
+     	 <input type="submit" value="提交" onclick="return check(this);"/>
+     	 <input type="reset" value="重置" />
+      </div>
       
+
     </form>
+    <br>
+    <div class="info">
     <%
         if(request.getAttribute("msg")!=null && !request.getAttribute("msg").toString().equals("")){
             out.print(request.getAttribute("msg"));
         }
     %>
+    </div>
+    	 <div class="photo">
+          <img src="pic/flightQuery/goHome.jpg" width = "280" height = "200" ><br>
+     </div>
+    	 <div class="bottom">
+	 
+	 	<hr>
+	 	<div class="introduction">旅客行程智能推荐系统</div>
+	 	</hr>
+	 </div>
 </body>
 </html>
