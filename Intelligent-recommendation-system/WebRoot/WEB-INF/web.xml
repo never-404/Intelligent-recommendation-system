@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" 
-	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
@@ -11,24 +11,60 @@
     <servlet-name>station</servlet-name>
     <servlet-class>servlet.station</servlet-class>
   </servlet>
+    <servlet-mapping>
+    <servlet-name>station</servlet-name>
+    <url-pattern>/servlet/station</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>stationCalcu</servlet-name>
     <servlet-class>servlet.stationCalcu</servlet-class>
   </servlet>
+    <servlet-mapping>
+    <servlet-name>stationCalcu</servlet-name>
+    <url-pattern>/servlet/stationCalcu</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
+　　<servlet-name>loginServlet</servlet-name>
+　　<servlet-class>filter.LoginServlet</servlet-class>
+  </servlet>
+  	<servlet-mapping>
+　　	<servlet-name>loginServlet</servlet-name>
+　　	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+   	
+<servlet>
+　　<servlet-name>logoutServlet</servlet-name>
+　　<servlet-class>filter.LogoutServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+　　<servlet-name>logoutServlet</servlet-name>
+　　<url-pattern>/LogoutServlet</url-pattern>
+</servlet-mapping>
+  
+   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>queryWithServlet</servlet-name>
-    <servlet-class>servlet.queryWithServlet</servlet-class>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>servlet.UploadServlet</servlet-class>
   </servlet>
+
+
+ <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/servlet/UploadServlet</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>queryWithServlet1</servlet-name>
     <servlet-class>servlet.queryWithServlet1</servlet-class>
   </servlet>
+<<<<<<< HEAD
     <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
@@ -65,10 +101,30 @@
   <servlet-mapping>
     <servlet-name>station</servlet-name>
     <url-pattern>/servlet/station</url-pattern>
+=======
+    <servlet-mapping>
+    <servlet-name>queryWithServlet1</servlet-name>
+    <url-pattern>/servlet/queryWithServlet1</url-pattern>
+>>>>>>> e5c42cf57c926eac4ff617289fa083eb68122c61
   </servlet-mapping>
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ValidateServlet</servlet-name>
+    <servlet-class>servlet.ValidateServlet</servlet-class>
+  </servlet>
+ 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>showResults</servlet-name>
+    <servlet-class>servlet.showResults</servlet-class>
+  </servlet>
   <servlet-mapping>
-    <servlet-name>stationCalcu</servlet-name>
-    <url-pattern>/servlet/stationCalcu</url-pattern>
+    <servlet-name>showResults</servlet-name>
+    <url-pattern>/servlet/showResults</url-pattern>
   </servlet-mapping>
     <servlet-mapping>
     <servlet-name>ValidateServlet</servlet-name>
@@ -76,6 +132,7 @@
   </servlet-mapping>
 
 
+<<<<<<< HEAD
   <servlet-mapping>
     <servlet-name>queryWithServlet1</servlet-name>
     <url-pattern>/servlet/queryWithServlet1</url-pattern>
@@ -100,12 +157,15 @@
   
   
   
+=======
+>>>>>>> e5c42cf57c926eac4ff617289fa083eb68122c61
 <filter>
 　　<filter-name>pemissionFilter</filter-name>
 　　<filter-class>filter.PemissionFilter</filter-class>
 </filter>
 <filter-mapping>
 　　<filter-name>pemissionFilter</filter-name>
+<<<<<<< HEAD
 　　<url-pattern>mainpage.jsp</url-pattern>
 </filter-mapping>
   
@@ -115,5 +175,20 @@
   
   <welcome-file-list>
     <welcome-file>log.jsp</welcome-file>
+=======
+　　<url-pattern>/servlet/queryWithServlet1</url-pattern>
+</filter-mapping>
+<filter-mapping>
+　　<filter-name>pemissionFilter</filter-name>
+　　<url-pattern>/QueryResult.jsp</url-pattern>
+</filter-mapping>
+ <filter-mapping>
+　　<filter-name>pemissionFilter</filter-name>
+　　<url-pattern>/mine.jsp</url-pattern>
+</filter-mapping>
+ 
+  <welcome-file-list>
+    <welcome-file>1.jsp</welcome-file>
+>>>>>>> e5c42cf57c926eac4ff617289fa083eb68122c61
   </welcome-file-list>
 </web-app>
