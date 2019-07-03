@@ -29,7 +29,36 @@
     <servlet-name>queryWithServlet1</servlet-name>
     <servlet-class>servlet.queryWithServlet1</servlet-class>
   </servlet>
-
+    <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ValidateServlet</servlet-name>
+    <servlet-class>servlets.ValidateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ValidateServlet1</servlet-name>
+    <servlet-class>servlet.ValidateServlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>filter.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>filter.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PemissionFilter</servlet-name>
+    <servlet-class>filter.PemissionFilter</servlet-class>
+  </servlet>
 
 
 
@@ -41,12 +70,50 @@
     <servlet-name>stationCalcu</servlet-name>
     <url-pattern>/servlet/stationCalcu</url-pattern>
   </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ValidateServlet</servlet-name>
+    <url-pattern>/servlet/ValidateServlet</url-pattern>
+  </servlet-mapping>
+
 
   <servlet-mapping>
     <servlet-name>queryWithServlet1</servlet-name>
     <url-pattern>/servlet/queryWithServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValidateServlet1</servlet-name>
+    <url-pattern>/servlet/ValidateServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PemissionFilter</servlet-name>
+    <url-pattern>/servlet/PemissionFilter</url-pattern>
   </servlet-mapping>	
+  
+  
+  
+  
+<filter>
+　　<filter-name>pemissionFilter</filter-name>
+　　<filter-class>filter.PemissionFilter</filter-class>
+</filter>
+<filter-mapping>
+　　<filter-name>pemissionFilter</filter-name>
+　　<url-pattern>mainpage.jsp</url-pattern>
+</filter-mapping>
+  
+  
+  
+
+  
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>log.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
